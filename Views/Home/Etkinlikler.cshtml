@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Etkinlik>
+
+@{
+}
+
+<div class="duyurular">
+    <a asp-controller="Home" asp-action="Etkinlikler"><h5>ETKİNLİKLER</h5></a>
+    <ul>
+        @foreach (var etkinlik in Model)
+        {
+            <li>
+                <a asp-controller="Home" asp-action="Etkinlik" asp-route-id="@etkinlik.Id">
+                    @etkinlik.EtkinlikBaslik<span> : @etkinlik.EtkinlikAciklama</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

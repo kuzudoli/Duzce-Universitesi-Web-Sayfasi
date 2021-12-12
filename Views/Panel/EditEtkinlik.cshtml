@@ -1,0 +1,29 @@
+﻿@model Etkinlik
+
+@{
+    Layout = "_PanelLayout";
+}
+<link href="~/js/Trumbowyg-main/dist/ui/trumbowyg.min.css" rel="stylesheet" />
+<div>
+    <form asp-controller="Panel" asp-action="EditEtkinlik" method="post">
+        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
+        <input asp-for="Id" type="hidden" />
+        <div>
+            <label>Etkinlik Başlık: </label>
+            <input asp-for="EtkinlikBaslik" />
+        </div>
+        <div>
+            <label>Etkinlik Açıklama: </label>
+            <br />
+            <textarea id="editor" asp-for="EtkinlikAciklama"></textarea>
+        </div>
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+@section scripts{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/js/Trumbowyg-main/dist/trumbowyg.min.js"></script>
+    <script>
+        $("#editor").trumbowyg();
+    </script>
+}

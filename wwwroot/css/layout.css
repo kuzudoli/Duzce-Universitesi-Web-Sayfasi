@@ -1,0 +1,236 @@
+:root {
+    --duBlue: #26348b;
+    --duRed: #af2730;
+    --duGreen: #8bc53d;
+}
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url("NewsGothBT-bold.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    height: 200vh;
+}
+
+/*Background*/
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.overlay img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /*background-image: url(../imgs/overlay.png);*/
+    z-index: -1;
+}
+
+/*end*/
+/*Quick Nav*/
+nav li,
+nav a,
+.contact a,
+.mainNavContainer li,
+.mainNavContainer a {
+    font-family: myFirstFont;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 1% !important;
+    background-color: var(--duRed);
+}
+
+.nav__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav__links li {
+        display: inline-block;
+        padding: 0px 20px 0 0 !important;
+    }
+
+        .nav__links li a,
+        .cta {
+            transition: .3s all ease;
+        }
+
+            .nav__links li a:hover,
+            .cta:hover {
+                color: #1e1e1e;
+            }
+
+.cta {
+    padding: 0px 10px 0 10px !important;
+}
+
+/*end*/
+/*Main Nav*/
+.mainNavContainer {
+    width: 820px;
+    position: sticky;
+    top: 150px;
+    /*28*/
+    transition: 1s;
+}
+
+#logo {
+    width: 150px;
+    position: absolute;
+    top: -50px;
+    left: 0px;
+    z-index: 1;
+    border-radius: 100%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.24);
+    transition: .2s;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 1% !important;
+    /*padding-left: 170px !important;*/
+    background-color: var(--duBlue);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.24);
+    transition: .5s;
+}
+
+    .main-nav ul {
+        padding-left: 160px;
+    }
+
+    .main-nav .nav__links li {
+        display: inline-block;
+        padding: 0px 15px !important;
+    }
+
+    .main-nav ul li a {
+        font-size: 17px !important;
+    }
+
+/*Scrolled*/
+.sticky {
+    width: 100%;
+    top: 28px;
+}
+
+    .sticky #logo {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sticky #logo {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sticky .main-nav ul {
+        padding: 0;
+        margin: auto;
+    }
+
+        .sticky .main-nav ul li a {
+            font-size: 18px !important;
+        }
+
+.dropdown__menu {
+    display: none;
+}
+
+.nav__links li:hover .dropdown__menu {
+    width: 200px;
+    display: block;
+    position: absolute;
+    top: 75%;
+    background-color: var(--duBlue);
+}
+
+    .nav__links li:hover .dropdown__menu ul {
+        padding-left: 0;
+        display: block;
+        margin: 10px;
+    }
+
+        .nav__links li:hover .dropdown__menu ul li {
+            display: block;
+            width: 190px;
+            margin: 20px 5px 20px 0px;
+            padding: 20px 5px 20px 0px;
+        }
+
+.fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown__menu-1 {
+    display: none;
+}
+
+.dropdown__menu ul li:hover .dropdown__menu-1 {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 100%;
+    background-color: var(--duBlue);
+}
+
+    .dropdown__menu ul li:hover .dropdown__menu-1 ul li {
+        width: 250px;
+        margin: 20px 5px 20px 0px;
+        padding: 20px 5px 20px 0px;
+    }
+
+/*Scrolled end*/
+/*Main Nav end*/
+
+.content {
+    margin-top: 200px;
+    width: 100%;
+    background-color: white;
+}
+
+.duyurular {
+    display: inline-block;
+    padding: 15px 0 15px 0;
+    width: 620px;
+}
+
+    .duyurular ul {
+        background-color: #f0f0f0;
+    }
+
+        .duyurular ul li {
+            padding: 15px;
+        }

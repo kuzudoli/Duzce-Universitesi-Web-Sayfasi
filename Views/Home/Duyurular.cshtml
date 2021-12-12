@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Duyuru>
+
+@{
+}
+
+<div class="duyurular">
+    <a asp-controller="Home" asp-action="Duyurular"><h5>DUYURULAR</h5></a>
+    <ul>
+        @foreach (var duyuru in Model)
+        {
+            <li>
+                <a asp-controller="Home" asp-action="Duyuru" asp-route-id="@duyuru.Id">
+                    @duyuru.DuyuruBaslik<span> : @duyuru.DuyuruAciklama</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

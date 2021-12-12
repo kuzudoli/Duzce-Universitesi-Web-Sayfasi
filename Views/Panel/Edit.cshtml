@@ -1,0 +1,28 @@
+﻿@model Duyuru
+@{
+    Layout = "_PanelLayout";
+}
+<link href="~/js/Trumbowyg-main/dist/ui/trumbowyg.min.css" rel="stylesheet" />
+<div>
+    <form asp-controller="Panel" asp-action="Edit" method="post">
+        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
+        <input asp-for="Id" type="hidden" />
+        <div>
+            <label>Duyuru Başlık: </label>
+            <input asp-for="DuyuruBaslik" />
+        </div>
+        <div>
+            <label>Duyuru Açıklama </label>
+            <br />
+            <textarea id="editor" asp-for="DuyuruAciklama"></textarea>
+        </div>
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+@section scripts{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/js/Trumbowyg-main/dist/trumbowyg.min.js"></script>
+    <script>
+        $("#editor").trumbowyg();
+    </script>
+}

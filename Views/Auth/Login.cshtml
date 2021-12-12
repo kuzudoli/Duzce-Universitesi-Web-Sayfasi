@@ -1,0 +1,38 @@
+﻿@model LoginViewModel
+@{
+    Layout = "_LoginLayout";
+}
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="#">
+            <h1 style="color: #26348b;">KAYIT OL</h1>
+            <input type="text" placeholder="Ad" />
+            <input type="text" placeholder="Soyad" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Şifre" />
+            <button>KAYIT OL</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form asp-controller="Auth" asp-action="Login" method="post">
+            <h1 style="color: #26348b;">GİRİŞ YAP</h1>
+            <input type="text" placeholder="Email" asp-for="UserName" />
+            <input type="password" placeholder="Şifre" asp-for="Password" />
+            <button type="submit">GİRİŞ YAP</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1 style="font-size: 30px;">Düzce Üniversitesi</h1>
+                <h2>Yönetim Paneline Hoşgeldiniz!</h2>
+                <button id="signIn">GİRİŞ YAP</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1 style="font-size: 30px;">Düzce Üniversitesi</h1>
+                <h2>Yönetim Paneline Hoşgeldiniz!</h2>
+                <button id="signUp">KAYIT OL</button>
+            </div>
+        </div>
+    </div>
+</div>
