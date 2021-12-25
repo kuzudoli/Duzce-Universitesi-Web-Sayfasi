@@ -10,5 +10,7 @@ namespace DuzceUniTez.ViewModels
     {
         public IEnumerable<Duyuru> Duyurular { get; set; }
         public IEnumerable<Etkinlik> Etkinlikler { get; set; }
+        public IEnumerable<Fakulte> Fakulteler { get; set; }
+        public IEnumerable<Bolum> Bolumler { get; set; }
     }
 }

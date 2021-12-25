@@ -104,6 +104,35 @@ namespace DuzceUniTez.Data.Repository
         #endregion
 
 
+        #region Bölümler
+        public Bolum GetBolum(int id)
+        {
+            return _ctx.Bolumler.FirstOrDefault(d => d.Id == id);
+        }
+
+        public List<Bolum> GetAllBolumler()
+        {
+            return _ctx.Bolumler.ToList();
+        }
+
+        public void AddBolum(Bolum bolum)
+        {
+            bolum.FakulteId = (from g in _ctx.Fakulteler where g.FakulteAd == bolum.Fakultesi select g.Id).FirstOrDefault();
+            _ctx.Bolumler.Add(bolum);
+        }
+
+        public void UpdateBolum(Bolum bolum)
+        {
+            _ctx.Bolumler.Update(bolum);
+        }
+
+        public void RemoveBolum(int id)
+        {
+            _ctx.Bolumler.Remove(GetBolum(id));
+        }
+        #endregion
+
+
         public async Task<bool> SaveChangesAsync()
         {
             if (await _ctx.SaveChangesAsync() > 0)
@@ -115,5 +144,6 @@ namespace DuzceUniTez.Data.Repository
                 return false;
             }
         }
+
     }
 }

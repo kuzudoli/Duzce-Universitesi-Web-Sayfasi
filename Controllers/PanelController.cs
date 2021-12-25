@@ -1,5 +1,6 @@
 ﻿using DuzceUniTez.Data.Repository;
 using DuzceUniTez.Models;
+using DuzceUniTez.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -18,11 +19,13 @@ namespace DuzceUniTez.Controllers
         {
             _repo = repo;
         }
+
         public IActionResult Index()
         {
             return View();
         }
 
+        #region Duyuru CRUD
         public IActionResult Duyurular()
         {
             var duyurular = _repo.GetAllDuyurular();
@@ -66,10 +69,9 @@ namespace DuzceUniTez.Controllers
             await _repo.SaveChangesAsync();
             return RedirectToAction("Duyurular");
         }
+        #endregion Duyurular
 
-
-        /*ETKİNLİK*/
-
+        #region Etkinlik CRUD
         public IActionResult Etkinlikler()
         {
             var etkinlikler = _repo.GetAllEtkinlikler();
@@ -113,14 +115,9 @@ namespace DuzceUniTez.Controllers
             await _repo.SaveChangesAsync();
             return RedirectToAction("Etkinlikler");
         }
+        #endregion
 
-
-
-
-
-
-        /*FAKÜLTE*/
-
+        #region Fakülte CRUD
         public IActionResult Fakulteler()
         {
             var fakulteler = _repo.GetAllFakulteler();
@@ -160,6 +157,52 @@ namespace DuzceUniTez.Controllers
             await _repo.SaveChangesAsync();
             return RedirectToAction("Fakulteler");
         }
+        #endregion
 
+        #region Bölüm CRUD
+
+        public IActionResult Bolumler()
+        {
+            var bolumler = _repo.GetAllBolumler();
+            return View(bolumler);
+        }
+
+        [HttpGet]
+        public IActionResult EditBolumler(int? id)
+        {
+            if (id == null)
+            {
+                return View(new Bolum());
+            }
+            else
+            {
+                var bolum = _repo.GetBolum((int)id);
+                return View(bolum);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditBolumler(Bolum bolum)
+        {
+            if (bolum.Id == 0)
+                _repo.AddBolum(bolum);
+            else
+                _repo.UpdateBolum(bolum);
+
+            if (await _repo.SaveChangesAsync())
+                return RedirectToAction("Bolumler");
+            else
+                return View(bolum);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RemoveBolum(int id)
+        {
+            _repo.RemoveBolum(id);
+            await _repo.SaveChangesAsync();
+            return RedirectToAction("Bolumler");
+        }
+
+        #endregion
     }
 }

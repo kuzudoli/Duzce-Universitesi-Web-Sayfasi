@@ -35,6 +35,15 @@ namespace DuzceUniTez.Data.Repository
         void RemoveFakulte(int id);
 
 
+
+        //Bölüm Tablosuna Ait CRUD İşlemleri
+        Bolum GetBolum(int id);
+        List<Bolum> GetAllBolumler();
+        void AddBolum(Bolum bolum);
+        void UpdateBolum(Bolum bolum);
+        void RemoveBolum(int id);
+
+
         Task<bool> SaveChangesAsync();
     }
 }

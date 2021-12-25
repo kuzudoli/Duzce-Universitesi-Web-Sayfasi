@@ -9,6 +9,8 @@ namespace DuzceUniTez.Models
     {
         public int Id { get; set; } //Fakülte tablosuna id olarak gidecek.
         public string BolumAdi { get; set; }
+        public string BolumTipi { get; set; }
+        public string Fakultesi { get; set; }
 
 
         public int FakulteId { get; set; }

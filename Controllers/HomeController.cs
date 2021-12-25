@@ -24,6 +24,9 @@ namespace DuzceUniTez.Controllers
             DataCollectionViewModel mymodel = new DataCollectionViewModel();
             mymodel.Duyurular = _repo.GetAllDuyurular();
             mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
+
+            ViewBag.fakulteSayisi = _repo.GetAllFakulteler().Count();
+
             return View(mymodel);
         }
 
