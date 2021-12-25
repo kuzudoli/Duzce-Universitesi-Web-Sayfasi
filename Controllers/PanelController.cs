@@ -3,6 +3,7 @@ using DuzceUniTez.Models;
 using DuzceUniTez.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -170,6 +171,9 @@ namespace DuzceUniTez.Controllers
         [HttpGet]
         public IActionResult EditBolumler(int? id)
         {
+            List<Fakulte> fakulteler = _repo.GetAllFakulteler(); //Fakülteler listesi doldurulur.
+            ViewBag.Funds = fakulteler;
+
             if (id == null)
             {
                 return View(new Bolum());

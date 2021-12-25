@@ -117,7 +117,7 @@ namespace DuzceUniTez.Data.Repository
 
         public void AddBolum(Bolum bolum)
         {
-            bolum.FakulteId = (from g in _ctx.Fakulteler where g.FakulteAd == bolum.Fakultesi select g.Id).FirstOrDefault();
+            //bolum.FakulteId = (from g in _ctx.Fakulteler where g.FakulteAd == bolum.Fakultesi select g.Id).FirstOrDefault();
             _ctx.Bolumler.Add(bolum);
         }
 

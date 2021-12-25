@@ -8,98 +8,19 @@
     <div class="container main-content">
         <div class="row">
             <div class="col-md-6 duyuru-etkinlik">
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Duyuru Başlık</h5>
-                            <p>Duyuru açıklaması</p>
+                @foreach (Duyuru duyuru in Model.Duyurular)
+                {
+                    <a href="#" class="card-link">
+                        <div class="inline-card">
+                            <img src="imgs/square.png">
+                            <div class="inline-card-text">
+                                <h5>@duyuru.DuyuruBaslik</h5>
+                                <p>Duyuru açıklaması</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Duyuru Başlık</h5>
-                            <p>Duyuru açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Duyuru Başlık</h5>
-                            <p>Duyuru açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Duyuru Başlık</h5>
-                            <p>Duyuru açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Duyuru Başlık</h5>
-                            <p>Duyuru açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 duyuru-etkinlik">
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Etkinlik Başlık</h5>
-                            <p>Etkinlik açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Etkinlik Başlık</h5>
-                            <p>Etkinlik açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Etkinlik Başlık</h5>
-                            <p>Etkinlik açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Etkinlik Başlık</h5>
-                            <p>Etkinlik açıklaması</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="card-link">
-                    <div class="inline-card">
-                        <img src="/imgs/square.png">
-                        <div class="inline-card-text">
-                            <h5>Etkinlik Başlık</h5>
-                            <p>Etkinlik açıklaması</p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                }
+
             </div>
         </div>
     </div>

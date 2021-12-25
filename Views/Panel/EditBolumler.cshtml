@@ -7,25 +7,24 @@
     <form asp-controller="Panel" asp-action="EditBolumler" method="post">
         @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
         <input asp-for="Id" type="hidden" />
-        <input asp-for="FakulteId" type="hidden" />
+
         <div>
             <label>Bölüm Adı: </label>
             <input asp-for="BolumAdi" />
         </div>
+
         <div>
             <label>Bölüm Tipi: </label>
             <br />
             <textarea id="editor" asp-for="BolumTipi"></textarea>
         </div>
 
-        <div>
-            <label>Fakültesi: </label>
-            <select id="fakulteler" asp-for="Fakultesi">
-                <option value="Mühendislik Fakültesi">Mühendislik</option>
-                <option value="Hukuk Fakültesi">Hukuk</option>
-            </select>
-        </div>
-
+    <select id="fakulteler" asp-for="FakulteId">
+        @foreach (var fakulte in ViewBag.Funds)
+        {
+            <option value="@fakulte.Id">@fakulte.FakulteAd</option>
+        }
+    </select>
 
         <input type="submit" value="Gönder" />
     </form>
