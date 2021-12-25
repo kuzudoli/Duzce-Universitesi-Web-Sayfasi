@@ -1,0 +1,48 @@
+﻿@model Fakulte
+@{
+    Layout = "_PanelLayout";
+}
+<link href="~/js/Trumbowyg-main/dist/ui/trumbowyg.min.css" rel="stylesheet" />
+<div>
+    <form asp-controller="Panel" asp-action="EditFakulteler" method="post">
+        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
+        <input asp-for="Id" type="hidden" />
+        <div>
+            <label>Fakülte Adı: </label>
+            <input asp-for="FakulteAd" />
+        </div>
+
+        <div>
+            <label>Fakülte Açıklaması: </label>
+            <br />
+            <textarea id="editor" asp-for="FakulteAciklama"></textarea>
+        </div>
+
+        <div>
+            <label>Fakülte Adresi: </label>
+            <br />
+            <textarea id="editor" asp-for="FakulteAdres"></textarea>
+        </div>
+
+        <div>
+            <label>Fakülte Tel: </label>
+            <br />
+            <textarea id="editor" asp-for="FakulteTel"></textarea>
+        </div>
+
+        <div>
+            <label>Fakülte Mail: </label>
+            <br />
+            <textarea id="editor" asp-for="FakulteMail"></textarea>
+        </div>
+
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+@section scripts{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/js/Trumbowyg-main/dist/trumbowyg.min.js"></script>
+    <script>
+        $("#editor").trumbowyg();
+    </script>
+}

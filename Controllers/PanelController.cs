@@ -113,5 +113,53 @@ namespace DuzceUniTez.Controllers
             await _repo.SaveChangesAsync();
             return RedirectToAction("Etkinlikler");
         }
+
+
+
+
+
+
+        /*FAKÜLTE*/
+
+        public IActionResult Fakulteler()
+        {
+            var fakulteler = _repo.GetAllFakulteler();
+            return View(fakulteler);
+        }
+
+        [HttpGet]
+        public IActionResult EditFakulteler(int? id)
+        {
+            if (id == null)
+                return View(new Fakulte());
+            else
+            {
+                var fakulte = _repo.GetFakulte((int)id);
+                return View(fakulte);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditFakulteler(Fakulte fakulte)
+        {
+            if (fakulte.Id == 0)
+                _repo.AddFakulte(fakulte);
+            else
+                _repo.UpdateFakulte(fakulte);
+
+            if (await _repo.SaveChangesAsync())
+                return RedirectToAction("Fakulteler");
+            else
+                return View(fakulte);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RemoveFakulte(int id)
+        {
+            _repo.RemoveFakulte(id);
+            await _repo.SaveChangesAsync();
+            return RedirectToAction("Fakulteler");
+        }
+
     }
 }

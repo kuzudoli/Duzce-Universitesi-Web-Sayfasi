@@ -15,7 +15,9 @@ namespace DuzceUniTez.Data.Repository
         {
             _ctx = ctx;
         }
-        /*DUYURU*/
+
+
+        #region Duyurular
         public void AddDuyuru(Duyuru duyuru)
         {
             _ctx.Duyurular.Add(duyuru);
@@ -41,9 +43,10 @@ namespace DuzceUniTez.Data.Repository
         {
             _ctx.Duyurular.Update(duyuru);
         }
+        #endregion
 
-        /*ETKİNLİK*/
 
+        #region Etkinlikler
         public void AddEtkinlik(Etkinlik etkinlik)
         {
             _ctx.Etkinlikler.Add(etkinlik);
@@ -69,14 +72,48 @@ namespace DuzceUniTez.Data.Repository
         {
             _ctx.Etkinlikler.Update(etkinlik);
         }
+        #endregion
+
+
+        #region Fakulteler
+        public void AddFakulte(Fakulte fakulte)
+        {
+            _ctx.Fakulteler.Add(fakulte);
+        }
+
+        public void UpdateFakulte(Fakulte fakulte)
+        {
+            _ctx.Fakulteler.Update(fakulte);
+        }
+
+        public void RemoveFakulte(int id)
+        {
+            _ctx.Fakulteler.Remove(GetFakulte(id));
+        }
+
+        public Fakulte GetFakulte(int id)
+        {
+            return _ctx.Fakulteler.FirstOrDefault(d => d.Id == id);
+        }
+
+        public List<Fakulte> GetAllFakulteler()
+        {
+            return _ctx.Fakulteler.ToList();
+        }
+
+        #endregion
 
 
         public async Task<bool> SaveChangesAsync()
         {
             if (await _ctx.SaveChangesAsync() > 0)
+            {
                 return true;
-
-            return false;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

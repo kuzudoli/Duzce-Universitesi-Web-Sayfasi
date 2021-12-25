@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Fakulte>
+@{
+    Layout = "_PanelLayout";
+}
+<div class="fakulteler">
+    <a style="display:inline-block;"><h5>FAKÜLTELER</h5></a>
+    <a asp-controller="Panel" asp-action="EditFakulteler" style="display:inline-block;float:right;"><h5>Fakülte Ekle</h5></a>
+    <ul>
+        @foreach (var fakulte in Model)
+        {
+            <li>
+                <a>
+                    @fakulte.FakulteAd
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="EditFakulteler" asp-route-id="@fakulte.Id">
+                    (Düzenle)
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="RemoveFakulte" asp-route-id="@fakulte.Id">
+                    (Kaldır)
+                </a>
+            </li>
+        }
+    </ul>
+</div>
