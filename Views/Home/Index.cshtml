@@ -2,30 +2,241 @@
 @{
 
 }
-<div class="duyurular">
-    <a asp-controller="Home" asp-action="Duyurular"><h5>DUYURULAR</h5></a>
-    <ul>
-        @foreach (var duyuru in Model.Duyurular)
-        {
-            <li>
-                <a asp-controller="Home" asp-action="Duyuru" asp-route-id="@duyuru.Id">
-                    @duyuru.DuyuruBaslik<span> : @duyuru.DuyuruAciklama</span>
-                </a>
-            </li>
-        }
-    </ul>
-</div>
 
-<div class="duyurular">
-    <a asp-controller="Home" asp-action="Etkinlikler"><h5>ETKİNLİKLER</h5></a>
-    <ul>
-        @foreach (var etkinlik in Model.Etkinlikler)
-        {
-            <li>
-                <a asp-controller="Home" asp-action="Etkinlik" asp-route-id="@etkinlik.Id">
-                    @etkinlik.EtkinlikBaslik<span> : @etkinlik.EtkinlikAciklama</span>
+<!--MAIN CONTENT-->
+<section id="first-section">
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-md-6 duyuru-etkinlik">
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Duyuru Başlık</h5>
+                            <p>Duyuru açıklaması</p>
+                        </div>
+                    </div>
                 </a>
-            </li>
-        }
-    </ul>
-</div>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Duyuru Başlık</h5>
+                            <p>Duyuru açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Duyuru Başlık</h5>
+                            <p>Duyuru açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Duyuru Başlık</h5>
+                            <p>Duyuru açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Duyuru Başlık</h5>
+                            <p>Duyuru açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 duyuru-etkinlik">
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Etkinlik Başlık</h5>
+                            <p>Etkinlik açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Etkinlik Başlık</h5>
+                            <p>Etkinlik açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Etkinlik Başlık</h5>
+                            <p>Etkinlik açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Etkinlik Başlık</h5>
+                            <p>Etkinlik açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="inline-card">
+                        <img src="/imgs/square.png">
+                        <div class="inline-card-text">
+                            <h5>Etkinlik Başlık</h5>
+                            <p>Etkinlik açıklaması</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <video autoplay muted loop>
+        <source src="./imgs/intro.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"><img src="imgs/overlay.png"></div>
+</section>
+<!--SECOND CONTENT-->
+<section id="second-section">
+    <h1>HABERLER</h1>
+    <div class="row row-cols-1 row-cols-md-4 g-5 w-100 p-4">
+        <div class="col">
+            <div class="card">
+                <div class="top-line"></div>
+                <img src="./imgs/square.png" class="h-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Haber Başlığı</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">XX.XX.XXXX</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="top-line"></div>
+                <img src="./imgs/square.png" class="h-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Haber Başlığı</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">XX.XX.XXXX</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="top-line"></div>
+                <img src="./imgs/square.png" class="h-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Haber Başlığı</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">XX.XX.XXXX</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="top-line"></div>
+                <img src="./imgs/square.png" class="h-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Haber Başlığı</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">XX.XX.XXXX</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--THIRD CONTENT-->
+<section id="third-section">
+    <h1>ÜNİVERSİTEMİZ</h1>
+    <!--First Row-->
+    <div class="row row-cols-md-4 g-5 w-100 p-4">
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">FAKÜLTE</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">ENSTİTÜ</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">YÜKSEKOKUL</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">M. YÜKSEKOKUL</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!--Second Row-->
+    <div class="row row-cols-md-4 g-5 w-100 p-4">
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">LİSANS PROGRAMI</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">LİSANSÜSTÜ PROGRAMI</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">UYG. AR. MERKEZİ</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="info-cards">
+                <h1 id="info-text">KOORDİNATÖRLÜK</h1>
+                <h1 class="uni-data">
+                    XX
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>

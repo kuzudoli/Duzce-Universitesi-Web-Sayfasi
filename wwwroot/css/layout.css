@@ -15,7 +15,7 @@
 }
 
 body {
-    height: 200vh;
+    /*height: 200vh !important;*/
 }
 
 /*Background*/
@@ -56,6 +56,7 @@ nav a,
 }
 
 header {
+    z-index: 10;
     position: sticky;
     top: 0;
     display: flex;
@@ -98,6 +99,7 @@ header {
     top: 150px;
     /*28*/
     transition: 1s;
+    z-index: 10;
 }
 
 #logo {
@@ -105,13 +107,14 @@ header {
     position: absolute;
     top: -50px;
     left: 0px;
-    z-index: 1;
+    z-index: 10 !important;
     border-radius: 100%;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.24);
     transition: .2s;
 }
 
 .main-nav {
+    z-index: 5 !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,13 +204,12 @@ header {
 .dropdown__menu ul li:hover .dropdown__menu-1 {
     display: block;
     position: absolute;
-    top: 100px;
+    margin-top: -35px;
     left: 100%;
     background-color: var(--duBlue);
 }
 
     .dropdown__menu ul li:hover .dropdown__menu-1 ul li {
-        width: 250px;
         margin: 20px 5px 20px 0px;
         padding: 20px 5px 20px 0px;
     }
@@ -215,22 +217,173 @@ header {
 /*Scrolled end*/
 /*Main Nav end*/
 
-.content {
-    margin-top: 200px;
-    width: 100%;
+/*SECTION*/
+section {
+    height: 100vh;
+}
+
+/*FIRST CONTENT*/
+#first-section {
+    height: 54vh;
+}
+
+.main-content {
+    width: 1000px;
+    height: 350px;
     background-color: white;
+    margin-top: 250px;
 }
 
-.duyurular {
-    display: inline-block;
-    padding: 15px 0 15px 0;
-    width: 620px;
+.inline-card {
+    color: black;
+    opacity: 0.5;
+    margin: 10px 0;
+    background-color: #f7f7f7;
+    transition: 0.5s;
 }
 
-    .duyurular ul {
-        background-color: #f0f0f0;
+    .inline-card img {
+        width: 100px;
+        margin-right: 10px;
     }
 
-        .duyurular ul li {
-            padding: 15px;
+    .inline-card img,
+    .inline-card .inline-card-text {
+        display: inline-block;
+    }
+
+.card-link {
+    margin: 0 !important;
+    text-decoration: none;
+}
+
+    .card-link:hover .inline-card {
+        opacity: 1;
+    }
+
+.duyuru-etkinlik {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+    .duyuru-etkinlik h4 {
+        margin-top: 5px;
+    }
+
+    .duyuru-etkinlik::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+    }
+
+    .duyuru-etkinlik::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .duyuru-etkinlik::-webkit-scrollbar-thumb {
+        background-color: #737373;
+    }
+
+
+/*SECOND CONTENT*/
+#second-section {
+    padding-top: 80px;
+}
+
+    #second-section .row {
+        margin-left: 0px !important;
+    }
+
+    #second-section h1 {
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: center;
+        color: var(--duBlue);
+    }
+
+    #second-section .card {
+        height: 90% !important;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 0px !important;
+    }
+
+    #second-section .top-line {
+        width: 100%;
+        height: 10px;
+        background-color: var(--duBlue);
+    }
+
+    #second-section .col:nth-child(2) .top-line {
+        background-color: var(--duRed);
+    }
+
+    #second-section .col:nth-child(4) .top-line {
+        background-color: var(--duRed);
+    }
+
+/*THIRD CONTENT*/
+
+#third-section {
+    background-image: url("../imgs/campus-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    color: white;
+}
+
+    #third-section h1 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    #third-section .row {
+        margin-left: 0px !important;
+    }
+
+        #third-section .row .col {
+            margin-top: 50px;
         }
+
+        #third-section .row:nth-child(3) .col {
+            margin-top: 20px;
+        }
+
+.info-cards {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to top, #56ab2f, #a8e063);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+#third-section .row:nth-child(3) .info-cards {
+    background: linear-gradient(to bottom, #00d2ff, #3a7bd5);
+}
+
+#info-text {
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+.uni-data {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    border-radius: 100%;
+    border: 4px solid white;
+    padding: 15px;
+}
+
+#third-section .row:nth-child(3) #info-text {
+    font-size: 26px;
+}
+
+footer {
+    padding: 10px;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    background-color: #333333;
+}
