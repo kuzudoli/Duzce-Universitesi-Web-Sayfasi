@@ -1,0 +1,43 @@
+﻿@model Enstitu
+@{
+    Layout = "_PanelLayout";
+}
+<div>
+    <h4>Enstitu Ekle/Güncelle</h4>
+    <form asp-controller="Panel" asp-action="EditEnstituler" method="post">
+        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
+        <input asp-for="Id" type="hidden" />
+
+        <div>
+            <label>Enstitu Adı: </label>
+            <input asp-for="EnsitutuAd" />
+        </div>
+        <br />
+        <div>
+            <label>Enstitu Adı: </label>
+            <input asp-for="EnsitutuAd" />
+        </div>
+        <br />
+        <div>
+            <label>Enstitu Adres: </label>
+            <input asp-for="EnsitutuAdres" />
+        </div>
+        <br />
+        <br />
+        <div>
+            <label>Enstitu Telefon: </label>
+            <input asp-for="EnsitutuTel" />
+        </div>
+        <br />
+        <br />
+        <div>
+            <label>Enstitu Mail: </label>
+            <input asp-for="EnsitutuMail" />
+        </div>
+        <br />
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+@section scripts{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+}

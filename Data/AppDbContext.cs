@@ -18,9 +18,8 @@ namespace DuzceUniTez.Data
         }
         public DbSet<Duyuru> Duyurular { get; set; }
         public DbSet<Etkinlik> Etkinlikler { get; set; }
-
-
         public DbSet<Fakulte> Fakulteler { get; set; }
         public DbSet<Bolum> Bolumler { get; set; }
+        public DbSet<Enstitu> Enstituler { get; set; }
     }
 }

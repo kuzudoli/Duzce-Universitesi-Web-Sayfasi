@@ -28,6 +28,8 @@ namespace DuzceUniTez.Controllers
             ViewBag.fakulteSayisi = _repo.GetAllFakulteler().Count();
             ViewBag.bolumSayisi = _repo.GetAllBolumler().Where(b => b.BolumTipi == "Lisans").Count();
             ViewBag.lisansustuBolumSayisi = _repo.GetAllBolumler().Where(b => b.BolumTipi == "Lisansüstü").Count();
+
+            ViewBag.enstituSayisi = _repo.GetAllEnstituler().Count();
             return View(mymodel);
         }
 

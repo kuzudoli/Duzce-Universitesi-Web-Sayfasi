@@ -44,6 +44,15 @@ namespace DuzceUniTez.Data.Repository
         void RemoveBolum(int id);
 
 
+
+        //Enstitu Tablosuna Ait CRUD İşlemleri
+        Enstitu GetEnstitu(int id);
+        List<Enstitu> GetAllEnstituler();
+        void AddEnstitu(Enstitu fakulte);
+        void UpdateEnstitu(Enstitu fakulte);
+        void RemoveEnstitu(int id);
+
+
         Task<bool> SaveChangesAsync();
     }
 }

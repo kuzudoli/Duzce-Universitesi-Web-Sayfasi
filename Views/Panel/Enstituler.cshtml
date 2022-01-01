@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Enstitu>
+@{
+    Layout = "_PanelLayout";
+}
+<div class="enstituler">
+    <a style="display:inline-block;"><h5>ENSTİTÜLER</h5></a>
+    <a asp-controller="Panel" asp-action="EditEnstituler" style="display:inline-block;float:right;"><h5>Enstitü Ekle</h5></a>
+    <ul>
+        @foreach (var enstitu in Model)
+        {
+            <li>
+                <a>
+                    @enstitu.EnsitutuAd
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="EditEnstituler" asp-route-id="@enstitu.Id">
+                    (Düzenle)
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="RemoveEnstitu" asp-route-id="@enstitu.Id">
+                    (Kaldır)
+                </a>
+            </li>
+        }
+    </ul>
+</div>

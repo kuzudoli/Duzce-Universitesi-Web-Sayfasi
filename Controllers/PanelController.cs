@@ -209,5 +209,51 @@ namespace DuzceUniTez.Controllers
 
         #endregion
 
+
+        #region Enstitü CRUD
+
+        public IActionResult Enstituler()
+        {
+            var enstituler = _repo.GetAllEnstituler();
+            return View(enstituler);
+        }
+
+        [HttpGet]
+        public IActionResult EditEnstituler(int? id)
+        {
+            if (id == null)
+            {
+                return View(new Enstitu());
+            }
+            else
+            {
+                var enstitu = _repo.GetEnstitu((int)id);
+                return View(enstitu);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditEnstituler(Enstitu enstitu)
+        {
+            if (enstitu.Id == 0)
+                _repo.AddEnstitu(enstitu);
+            else
+                _repo.UpdateEnstitu(enstitu);
+
+            if (await _repo.SaveChangesAsync())
+                return RedirectToAction("Enstituler");
+            else
+                return View(enstitu);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RemoveEnstitu(int id)
+        {
+            _repo.RemoveEnstitu(id);
+            await _repo.SaveChangesAsync();
+            return RedirectToAction("Enstituler");
+        }
+
+        #endregion
     }
 }

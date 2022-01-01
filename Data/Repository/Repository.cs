@@ -132,6 +132,38 @@ namespace DuzceUniTez.Data.Repository
         }
         #endregion
 
+
+        #region Enstituler
+        public Enstitu GetEnstitu(int id)
+        {
+            return _ctx.Enstituler.FirstOrDefault(d => d.Id == id);
+        }
+
+        public List<Enstitu> GetAllEnstituler()
+        {
+            return _ctx.Enstituler.ToList();
+        }
+
+        public void AddEnstitu(Enstitu enstitu)
+        {
+            _ctx.Enstituler.Add(enstitu);
+        }
+
+        public void UpdateEnstitu(Enstitu enstitu)
+        {
+            _ctx.Enstituler.Update(enstitu);
+        }
+
+        public void RemoveEnstitu(int id)
+        {
+            _ctx.Enstituler.Remove(GetEnstitu(id));
+        }
+        #endregion
+
+
+
+
+        #region Senkronizasyon
         public async Task<bool> SaveChangesAsync()
         {
             if (await _ctx.SaveChangesAsync() > 0)
@@ -143,5 +175,6 @@ namespace DuzceUniTez.Data.Repository
                 return false;
             }
         }
+        #endregion
     }
 }
