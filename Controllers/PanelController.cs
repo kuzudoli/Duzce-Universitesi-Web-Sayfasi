@@ -300,5 +300,51 @@ namespace DuzceUniTez.Controllers
         }
 
         #endregion
+
+        #region Meslek YüksekOkul CRUD
+
+        public IActionResult MeslekYuksekOkullar()
+        {
+            var meslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
+            return View(meslekYuksekOkullar);
+        }
+
+        [HttpGet]
+        public IActionResult EditMeslekYuksekOkullar(int? id)
+        {
+            if (id == null)
+            {
+                return View(new MeslekYuksekOkul());
+            }
+            else
+            {
+                var meslekYuksekOkul = _repo.GetMeslekYuksekOkul((int)id);
+                return View(meslekYuksekOkul);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditMeslekYuksekOkullar(MeslekYuksekOkul meslekYuksekOkul)
+        {
+            if (meslekYuksekOkul.Id == 0)
+                _repo.AddMeslekYuksekOkul(meslekYuksekOkul);
+            else
+                _repo.UpdateMeslekYuksekOkul(meslekYuksekOkul);
+
+            if (await _repo.SaveChangesAsync())
+                return RedirectToAction("MeslekYuksekOkullar");
+            else
+                return View(meslekYuksekOkul);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RemoveMeslekYuksekOkul(int id)
+        {
+            _repo.RemoveMeslekYuksekOkul(id);
+            await _repo.SaveChangesAsync();
+            return RedirectToAction("MeslekYuksekOkullar");
+        }
+
+        #endregion
     }
 }

@@ -189,6 +189,33 @@ namespace DuzceUniTez.Data.Repository
         #endregion
 
 
+        #region MeslekYüksekOkullar
+        public MeslekYuksekOkul GetMeslekYuksekOkul(int id)
+        {
+            return _ctx.MeslekYuksekOkullar.FirstOrDefault(d => d.Id == id);
+        }
+
+        public List<MeslekYuksekOkul> GetAllMeslekYuksekOkullar()
+        {
+            return _ctx.MeslekYuksekOkullar.ToList();
+        }
+
+        public void AddMeslekYuksekOkul(MeslekYuksekOkul meslekYuksekOkul)
+        {
+            _ctx.MeslekYuksekOkullar.Add(meslekYuksekOkul);
+        }
+
+        public void UpdateMeslekYuksekOkul(MeslekYuksekOkul meslekYuksekOkul)
+        {
+            _ctx.MeslekYuksekOkullar.Update(meslekYuksekOkul);
+        }
+
+        public void RemoveMeslekYuksekOkul(int id)
+        {
+            _ctx.MeslekYuksekOkullar.Remove(GetMeslekYuksekOkul(id));
+        }
+        #endregion
+
         #region Senkronizasyon
         public async Task<bool> SaveChangesAsync()
         {
@@ -201,6 +228,8 @@ namespace DuzceUniTez.Data.Repository
                 return false;
             }
         }
+
+       
         #endregion
     }
 }

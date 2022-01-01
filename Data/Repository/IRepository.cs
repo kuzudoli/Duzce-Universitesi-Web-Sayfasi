@@ -61,6 +61,14 @@ namespace DuzceUniTez.Data.Repository
         void RemoveYuksekOkul(int id);
 
 
+        //MeslekYuksekOkul Tablosuna Ait CRUD İşlemleri
+        MeslekYuksekOkul GetMeslekYuksekOkul(int id);
+        List<MeslekYuksekOkul> GetAllMeslekYuksekOkullar();
+        void AddMeslekYuksekOkul(MeslekYuksekOkul meslekYuksekOkul);
+        void UpdateMeslekYuksekOkul(MeslekYuksekOkul meslekYuksekOkul);
+        void RemoveMeslekYuksekOkul(int id);
+
+
         Task<bool> SaveChangesAsync();
     }
 }

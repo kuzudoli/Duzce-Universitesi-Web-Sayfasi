@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MeslekYuksekOkul>
+@{
+    Layout = "_PanelLayout";
+}
+<div class="meslekyuksekokullar">
+    <a style="display:inline-block;"><h5>MESLEK YÜKSEK OKULLAR</h5></a>
+    <a asp-controller="Panel" asp-action="EditMeslekYuksekOkullar" style="display:inline-block;float:right;"><h5>Meslek Yüksekokul Ekle</h5></a>
+    <ul>
+        @foreach (var meslekYuksekOkul in Model)
+        {
+            <li>
+                <a>
+                    @meslekYuksekOkul.MeslekYuksekOkulAd
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="EditMeslekYuksekOkullar" asp-route-id="@meslekYuksekOkul.Id">
+                    (Düzenle)
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="RemoveMeslekYuksekOkul" asp-route-id="@meslekYuksekOkul.Id">
+                    (Kaldır)
+                </a>
+            </li>
+        }
+    </ul>
+</div>

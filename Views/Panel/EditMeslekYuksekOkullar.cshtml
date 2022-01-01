@@ -1,0 +1,36 @@
+﻿@model MeslekYuksekOkul
+@{
+    Layout = "_PanelLayout";
+}
+<div>
+    <h4>Meslek Yüksekokul Ekle/Güncelle</h4>
+    <form asp-controller="Panel" asp-action="EditMeslekYuksekOkullar" method="post">
+        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
+        <input asp-for="Id" type="hidden" />
+
+        <div>
+            <label>Meslek Yüksekokul Adı: </label>
+            <input asp-for="MeslekYuksekOkulAd" />
+        </div>
+        <br />
+        <div>
+            <label>Meslek Yüksekokul Adres: </label>
+            <input asp-for="MeslekYuksekOkulAdres" />
+        </div>
+        <br />
+        <div>
+            <label>Meslek Yüksekokul Telefon: </label>
+            <input asp-for="MeslekYuksekOkulTel" />
+        </div>
+        <br />
+        <div>
+            <label>Meslek Yüksekokul Mail: </label>
+            <input asp-for="MeslekYuksekOkulMail" />
+        </div>
+        <br />
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+@section scripts{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+}

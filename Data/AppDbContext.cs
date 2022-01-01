@@ -22,5 +22,6 @@ namespace DuzceUniTez.Data
         public DbSet<Bolum> Bolumler { get; set; }
         public DbSet<Enstitu> Enstituler { get; set; }
         public DbSet<YuksekOkul> YuksekOkullar { get; set; }
+        public DbSet<MeslekYuksekOkul> MeslekYuksekOkullar { get; set; }
     }
 }

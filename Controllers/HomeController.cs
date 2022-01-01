@@ -31,6 +31,7 @@ namespace DuzceUniTez.Controllers
 
             ViewBag.enstituSayisi = _repo.GetAllEnstituler().Count();
             ViewBag.yuksekOkulSayisi = _repo.GetAllYuksekOkullar().Count();
+            ViewBag.meslekYuksekOkulSayisi = _repo.GetAllMeslekYuksekOkullar().Count();
             return View(mymodel);
         }
 
