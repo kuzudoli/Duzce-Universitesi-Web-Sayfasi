@@ -161,6 +161,32 @@ namespace DuzceUniTez.Data.Repository
         #endregion
 
 
+        #region YüksekOkullar
+        public YuksekOkul GetYuksekOkul(int id)
+        {
+            return _ctx.YuksekOkullar.FirstOrDefault(d => d.Id == id);
+        }
+
+        public List<YuksekOkul> GetAllYuksekOkullar()
+        {
+            return _ctx.YuksekOkullar.ToList();
+        }
+
+        public void AddYuksekOkul(YuksekOkul yuksekOkul)
+        {
+            _ctx.YuksekOkullar.Add(yuksekOkul);
+        }
+
+        public void UpdateYuksekOkul(YuksekOkul yuksekOkul)
+        {
+            _ctx.YuksekOkullar.Update(yuksekOkul);
+        }
+
+        public void RemoveYuksekOkul(int id)
+        {
+            _ctx.YuksekOkullar.Remove(GetYuksekOkul(id));
+        }
+        #endregion
 
 
         #region Senkronizasyon

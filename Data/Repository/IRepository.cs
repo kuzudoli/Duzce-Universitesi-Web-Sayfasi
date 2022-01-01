@@ -48,9 +48,17 @@ namespace DuzceUniTez.Data.Repository
         //Enstitu Tablosuna Ait CRUD İşlemleri
         Enstitu GetEnstitu(int id);
         List<Enstitu> GetAllEnstituler();
-        void AddEnstitu(Enstitu fakulte);
-        void UpdateEnstitu(Enstitu fakulte);
+        void AddEnstitu(Enstitu enstitu);
+        void UpdateEnstitu(Enstitu enstitu);
         void RemoveEnstitu(int id);
+
+
+        //YuksekOkul Tablosuna Ait CRUD İşlemleri
+        YuksekOkul GetYuksekOkul(int id);
+        List<YuksekOkul> GetAllYuksekOkullar();
+        void AddYuksekOkul(YuksekOkul yuksekOkul);
+        void UpdateYuksekOkul(YuksekOkul yuksekOkul);
+        void RemoveYuksekOkul(int id);
 
 
         Task<bool> SaveChangesAsync();

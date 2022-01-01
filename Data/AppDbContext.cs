@@ -21,5 +21,6 @@ namespace DuzceUniTez.Data
         public DbSet<Fakulte> Fakulteler { get; set; }
         public DbSet<Bolum> Bolumler { get; set; }
         public DbSet<Enstitu> Enstituler { get; set; }
+        public DbSet<YuksekOkul> YuksekOkullar { get; set; }
     }
 }

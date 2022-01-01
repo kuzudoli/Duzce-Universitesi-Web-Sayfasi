@@ -1,31 +1,31 @@
-﻿@model Enstitu
+﻿@model YuksekOkul
 @{
     Layout = "_PanelLayout";
 }
 <div>
-    <h4>Enstitu Ekle/Güncelle</h4>
-    <form asp-controller="Panel" asp-action="EditEnstituler" method="post">
+    <h4>Yüksekokul Ekle/Güncelle</h4>
+    <form asp-controller="Panel" asp-action="EditYuksekOkullar" method="post">
         @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
         <input asp-for="Id" type="hidden" />
 
         <div>
-            <label>Enstitu Adı: </label>
-            <input asp-for="EnsitutuAd" />
+            <label>Yüksekokul Adı: </label>
+            <input asp-for="YuksekOkulAd" />
         </div>
         <br />
         <div>
-            <label>Enstitu Adres: </label>
-            <input asp-for="EnsitutuAdres" />
+            <label>Yüksekokul Adres: </label>
+            <input asp-for="YuksekOkulAdres" />
         </div>
         <br />
         <div>
-            <label>Enstitu Telefon: </label>
-            <input asp-for="EnsitutuTel" />
+            <label>Yüksekokul Telefon: </label>
+            <input asp-for="YuksekOkulTel" />
         </div>
         <br />
         <div>
-            <label>Enstitu Mail: </label>
-            <input asp-for="EnsitutuMail" />
+            <label>Yüksekokul Mail: </label>
+            <input asp-for="YuksekOkulMail" />
         </div>
         <br />
         <input type="submit" value="Gönder" />

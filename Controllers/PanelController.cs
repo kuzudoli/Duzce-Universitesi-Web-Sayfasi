@@ -209,7 +209,6 @@ namespace DuzceUniTez.Controllers
 
         #endregion
 
-
         #region Enstitü CRUD
 
         public IActionResult Enstituler()
@@ -252,6 +251,52 @@ namespace DuzceUniTez.Controllers
             _repo.RemoveEnstitu(id);
             await _repo.SaveChangesAsync();
             return RedirectToAction("Enstituler");
+        }
+
+        #endregion
+
+        #region YüksekOkul CRUD
+
+        public IActionResult YuksekOkullar()
+        {
+            var yuksekOkullar = _repo.GetAllYuksekOkullar();
+            return View(yuksekOkullar);
+        }
+
+        [HttpGet]
+        public IActionResult EditYuksekOkullar(int? id)
+        {
+            if (id == null)
+            {
+                return View(new YuksekOkul());
+            }
+            else
+            {
+                var yuksekOkul = _repo.GetYuksekOkul((int)id);
+                return View(yuksekOkul);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditYuksekOkullar(YuksekOkul yuksekOkul)
+        {
+            if (yuksekOkul.Id == 0)
+                _repo.AddYuksekOkul(yuksekOkul);
+            else
+                _repo.UpdateYuksekOkul(yuksekOkul);
+
+            if (await _repo.SaveChangesAsync())
+                return RedirectToAction("YuksekOkullar");
+            else
+                return View(yuksekOkul);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RemoveYuksekOkul(int id)
+        {
+            _repo.RemoveYuksekOkul(id);
+            await _repo.SaveChangesAsync();
+            return RedirectToAction("YuksekOkullar");
         }
 
         #endregion
