@@ -208,5 +208,6 @@ namespace DuzceUniTez.Controllers
         }
 
         #endregion
+
     }
 }

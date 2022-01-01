@@ -132,7 +132,6 @@ namespace DuzceUniTez.Data.Repository
         }
         #endregion
 
-
         public async Task<bool> SaveChangesAsync()
         {
             if (await _ctx.SaveChangesAsync() > 0)
@@ -144,6 +143,5 @@ namespace DuzceUniTez.Data.Repository
                 return false;
             }
         }
-
     }
 }
