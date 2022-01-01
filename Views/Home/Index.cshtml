@@ -15,12 +15,25 @@
                             <img src="imgs/square.png">
                             <div class="inline-card-text">
                                 <h5>@duyuru.DuyuruBaslik</h5>
-                                <p>Duyuru açıklaması</p>
+                                <p>@duyuru.DuyuruAciklama</p>
                             </div>
                         </div>
                     </a>
                 }
-
+            </div>
+            <div class="col-md-6 duyuru-etkinlik">
+                @foreach (Etkinlik etkinlik in Model.Etkinlikler)
+                {
+                    <a href="#" class="card-link">
+                        <div class="inline-card">
+                            <img src="imgs/square.png">
+                            <div class="inline-card-text">
+                                <h5>@etkinlik.EtkinlikBaslik</h5>
+                                <p>@etkinlik.EtkinlikAciklama</p>
+                            </div>
+                        </div>
+                    </a>
+                }
             </div>
         </div>
     </div>
