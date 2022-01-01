@@ -24,6 +24,11 @@ namespace DuzceUniTez.Controllers
             DataCollectionViewModel mymodel = new DataCollectionViewModel();
             mymodel.Duyurular = _repo.GetAllDuyurular();
             mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
+            mymodel.Fakulteler = _repo.GetAllFakulteler();
+            mymodel.Bolumler = _repo.GetAllBolumler();
+            mymodel.Enstituler = _repo.GetAllEnstituler();
+            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
+            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
 
             ViewBag.fakulteSayisi = _repo.GetAllFakulteler().Count();
             ViewBag.bolumSayisi = _repo.GetAllBolumler().Where(b => b.BolumTipi == "Lisans").Count();
@@ -32,6 +37,9 @@ namespace DuzceUniTez.Controllers
             ViewBag.enstituSayisi = _repo.GetAllEnstituler().Count();
             ViewBag.yuksekOkulSayisi = _repo.GetAllYuksekOkullar().Count();
             ViewBag.meslekYuksekOkulSayisi = _repo.GetAllMeslekYuksekOkullar().Count();
+
+
+          
             return View(mymodel);
         }
 

@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@model DataCollectionViewModel
+@{
+
+}
+
+<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -52,12 +57,10 @@
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
-                                        <li><a href="#">Sub Dropdown 1</a></li>
-                                        <li><a href="#">Sub Dropdown 2</a></li>
-                                        <li><a href="#">Sub Dropdown 3</a></li>
-                                        <li><a href="#">Sub Dropdown 4</a></li>
-                                        <li><a href="#">Sub Dropdown 5</a></li>
-                                        <li><a href="#">Sub Dropdown 6</a></li>
+                                        @foreach (Fakulte fakulte in Model.Fakulteler)
+                                        {
+                                            <li><a href="#">@fakulte.FakulteAd</a></li>
+                                        }
                                     </ul>
                                 </div>
                             </li>
@@ -66,12 +69,10 @@
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
-                                        <li><a href="#">Sub Dropdown 1</a></li>
-                                        <li><a href="#">Sub Dropdown 2</a></li>
-                                        <li><a href="#">Sub Dropdown 3</a></li>
-                                        <li><a href="#">Sub Dropdown 4</a></li>
-                                        <li><a href="#">Sub Dropdown 5</a></li>
-                                        <li><a href="#">Sub Dropdown 6</a></li>
+                                        @foreach (Enstitu enstitu in Model.Enstituler)
+                                        {
+                                            <li><a href="#">@enstitu.EnsitutuAd</a></li>
+                                        }
                                     </ul>
                                 </div>
                             </li>
@@ -80,12 +81,10 @@
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
-                                        <li><a href="#">Sub Dropdown 1</a></li>
-                                        <li><a href="#">Sub Dropdown 2</a></li>
-                                        <li><a href="#">Sub Dropdown 3</a></li>
-                                        <li><a href="#">Sub Dropdown 4</a></li>
-                                        <li><a href="#">Sub Dropdown 5</a></li>
-                                        <li><a href="#">Sub Dropdown 6</a></li>
+                                        @foreach (YuksekOkul yuksekOkul in Model.YuksekOkullar)
+                                        {
+                                            <li><a href="#">@yuksekOkul.YuksekOkulAd</a></li>
+                                        }
                                     </ul>
                                 </div>
                             </li>
@@ -94,12 +93,10 @@
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
-                                        <li><a href="#">Sub Dropdown 1</a></li>
-                                        <li><a href="#">Sub Dropdown 2</a></li>
-                                        <li><a href="#">Sub Dropdown 3</a></li>
-                                        <li><a href="#">Sub Dropdown 4</a></li>
-                                        <li><a href="#">Sub Dropdown 5</a></li>
-                                        <li><a href="#">Sub Dropdown 6</a></li>
+                                        @foreach (MeslekYuksekOkul meslekYuksekOkul in Model.MeslekYuksekOkullar)
+                                        {
+                                            <li><a href="#">@meslekYuksekOkul.MeslekYuksekOkulAd</a></li>
+                                        }
                                     </ul>
                                 </div>
                             </li>
