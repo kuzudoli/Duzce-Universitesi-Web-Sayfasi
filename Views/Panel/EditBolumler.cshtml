@@ -3,6 +3,7 @@
     Layout = "_PanelLayout";
 }
 <div>
+    <h4>Bölüm Ekle/Güncelle</h4>
     <form asp-controller="Panel" asp-action="EditBolumler" method="post">
         @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
         <input asp-for="Id" type="hidden" />
@@ -11,20 +12,25 @@
             <label>Bölüm Adı: </label>
             <input asp-for="BolumAdi" />
         </div>
-
+        <br />
         <div>
-            <label>Bölüm Tipi: </label>
-            <br />
-            <textarea asp-for="BolumTipi"></textarea>
+            Bölüm Tipi:
+            <select asp-for="BolumTipi">
+                <option value="Lisans">Lisans</option>
+                <option value="Lisansüstü">Lisansüstü</option>
+            </select>
         </div>
-
-    <select id="fakulteler" asp-for="FakulteId">
-        @foreach (var fakulte in ViewBag.Funds)
-        {
-            <option value="@fakulte.Id">@fakulte.FakulteAd</option>
-        }
-    </select>
-
+        <br />
+        <div>
+            Fakülte:
+            <select id="fakulteler" asp-for="FakulteId">
+                @foreach (var fakulte in ViewBag.Funds)
+                {
+                    <option value="@fakulte.Id">@fakulte.FakulteAd</option>
+                }
+            </select>
+        </div>
+        <br />
         <input type="submit" value="Gönder" />
     </form>
 </div>
