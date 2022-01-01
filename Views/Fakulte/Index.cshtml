@@ -1,0 +1,25 @@
+﻿@model DataViewModel
+@{
+}
+<section id="first-section">
+    <div class="container-fluid side-content">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="fakulteImg"></div>
+            </div>
+            <div class="col-md-8">
+                <h4>@Model.Fakulte.FakulteAd</h4>
+                <p>@Model.Fakulte.FakulteAciklama</p>
+                <ul>
+                    <h5>Bölümler</h5>
+                    @foreach (var bolum in Model.Bolumler)
+                    {
+                        <input asp-for="@bolum.Id" hidden />
+                        <li>@bolum.BolumAdi</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"><img src="~/imgs/campus-bg.jpg"></div>
+</section>
