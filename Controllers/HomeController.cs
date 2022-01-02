@@ -24,6 +24,7 @@ namespace DuzceUniTez.Controllers
             DataCollectionViewModel mymodel = new DataCollectionViewModel();
             mymodel.Duyurular = _repo.GetAllDuyurular();
             mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
+            mymodel.Haberler = _repo.GetAllHaberler().TakeLast(4).Reverse();
             mymodel.Fakulteler = _repo.GetAllFakulteler();
             mymodel.Bolumler = _repo.GetAllBolumler();
             mymodel.Enstituler = _repo.GetAllEnstituler();
