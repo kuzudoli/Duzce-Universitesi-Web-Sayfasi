@@ -408,7 +408,22 @@ footer {
     background-color: white;
     margin-top: 150px;
 }
-
+.haber-content {
+    width: 1200px;
+    height: auto;
+    background-color: white;
+    margin-top: 150px;
+}
+#haber .card{
+    opacity:0.5;
+}
+#haber{
+    color:black;
+    text-decoration:none;
+}
+#haber:hover#haber .card{
+    opacity: 1;
+}
 .side-content .row{
     padding:10px 0;
     height:100%;
