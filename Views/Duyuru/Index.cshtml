@@ -2,22 +2,22 @@
 
 <section id="first-section">
     <div class="container-fluid haber-content">
-        <h3 class="pt-3 px-3">HABERLER</h3>
+        <h3 class="pt-3 px-3">DUYURULAR</h3>
         <hr/>
         <div class="row">
-            @foreach (Haber haber in Model.Haberler)
+            @foreach (Duyuru duyuru in Model.Duyurular)
             {
                 <div class="col-md-3 mb-4">
-                    <a id="haber" asp-controller="Haber" asp-action="Haber" asp-route-id="@haber.Id">
+                    <a id="haber" asp-controller="Duyuru" asp-action="Duyuru" asp-route-id="@duyuru.Id">
                         <div class="card">
                             <div class="top-line"></div>
                             <img src="~/imgs/square.png" class="h-50" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">@haber.HaberBaslik</h5>
-                                <p class="card-text">@haber.HaberAciklama</p>
+                                <h5 class="card-title">@duyuru.DuyuruBaslik</h5>
+                                <p class="card-text">@duyuru.DuyuruAciklama</p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">@haber.HaberTarih</small>
+                                <small class="text-muted">@duyuru.DuyuruTarih</small>
                             </div>
                         </div>
                     </a>

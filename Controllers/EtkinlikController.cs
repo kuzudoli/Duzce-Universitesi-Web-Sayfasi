@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DuzceUniTez.Controllers
 {
-    public class HaberController : Controller
+    public class EtkinlikController : Controller
     {
         private IRepository _repo;
 
-        public HaberController(IRepository repo)
+        public EtkinlikController(IRepository repo)
         {
             _repo = repo;
         }
@@ -26,11 +26,11 @@ namespace DuzceUniTez.Controllers
             mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
             mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
 
-            mymodel.Haberler = _repo.GetAllHaberler();
+            mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
             return View(mymodel);
         }
 
-        public IActionResult Haber(int id)
+        public IActionResult Etkinlik(int id)
         {
             DataViewModel mymodel = new DataViewModel();
 
@@ -39,7 +39,7 @@ namespace DuzceUniTez.Controllers
             mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
             mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
 
-            mymodel.Haber = _repo.GetHaber(id);
+            mymodel.Etkinlik = _repo.GetEtkinlik(id);
             return View(mymodel);
         }
     }
