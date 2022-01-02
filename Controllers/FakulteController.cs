@@ -21,6 +21,14 @@ namespace DuzceUniTez.Controllers
         public IActionResult Index(int id)
         {
             DataViewModel mymodel = new DataViewModel();
+            //menu
+            mymodel.Duyurular = _repo.GetAllDuyurular();
+            mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
+            mymodel.Fakulteler = _repo.GetAllFakulteler();
+            mymodel.Enstituler = _repo.GetAllEnstituler();
+            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
+            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
+
             //Fakulte fakulte = _repo.GetFakulte(id);
             mymodel.Bolumler = _repo.GetAllBolumler().Where(b => b.FakulteId == id);
             mymodel.Fakulte = _repo.GetFakulte(id);

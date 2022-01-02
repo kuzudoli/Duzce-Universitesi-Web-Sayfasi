@@ -388,7 +388,9 @@ footer {
     background-color: #333333;
     margin-top:70px;
 }
-
+.contact #tel{
+    margin-left:30px;
+}
 .sideBg img {
     position: absolute;
     top: 0;

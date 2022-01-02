@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace DuzceUniTez.ViewModels
 {
-    public class DataViewModel
+    public class DataViewModel:DataCollectionViewModel
     {
         public Fakulte Fakulte { get; set; }
-        public IEnumerable<Bolum> Bolumler { get; set; }
-
+        //public IEnumerable<Bolum> Bolumler { get; set; }
     }
 }
