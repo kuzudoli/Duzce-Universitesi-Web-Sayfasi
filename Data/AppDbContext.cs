@@ -23,5 +23,6 @@ namespace DuzceUniTez.Data
         public DbSet<Enstitu> Enstituler { get; set; }
         public DbSet<YuksekOkul> YuksekOkullar { get; set; }
         public DbSet<MeslekYuksekOkul> MeslekYuksekOkullar { get; set; }
+        public DbSet<Haber> Haberler { get; set; }
     }
 }

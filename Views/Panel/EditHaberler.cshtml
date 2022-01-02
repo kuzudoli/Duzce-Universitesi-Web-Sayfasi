@@ -1,0 +1,43 @@
+﻿@model Haber
+@{
+    Layout = "_PanelLayout";
+}
+
+<div>
+    <form asp-controller="Panel" asp-action="EditHaberler" method="post">
+        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
+        <input asp-for="Id" type="hidden" />
+        <div>
+            <label>Haber Başlığı: </label>
+            <input asp-for="HaberBaslik" />
+        </div>
+
+        <div>
+            <label>Haber Açıklaması: </label>
+            <br />
+            <textarea asp-for="HaberAciklama"></textarea>
+        </div>
+
+        <div>
+            <label>Haber Kategori: </label>
+            <br />
+            <select asp-for="HaberKategori" id="haberKategori">
+                <option value="Teknoloji">Teknoloji</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Akademik">Akademik</option>
+                <option value="Saglik">Sağlık</option>
+                <option value="Diger">Diğer</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Haber Tarihi: </label>
+            <br />
+            <input id="haberTarihi" type="date" asp-for="HaberTarih" />
+        </div>
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+@section scripts{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+}

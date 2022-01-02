@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Haber>
+@{
+    Layout = "_PanelLayout";
+}
+<div class="haberler">
+    <a style="display:inline-block;"><h5>HABERLER</h5></a>
+    <a asp-controller="Panel" asp-action="EditHaberler" style="display:inline-block;float:right;"><h5>Haber Ekle</h5></a>
+    <ul>
+        @foreach (var haber in Model)
+        {
+            <li>
+                <a>
+                    @haber.HaberBaslik
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="EditHaberler" asp-route-id="@haber.Id">
+                    (Düzenle)
+                </a>
+                -
+                <a asp-controller="Panel" asp-action="RemoveHaber" asp-route-id="@haber.Id">
+                    (Kaldır)
+                </a>
+            </li>
+        }
+    </ul>
+</div>

@@ -15,5 +15,6 @@ namespace DuzceUniTez.ViewModels
         public IEnumerable<Enstitu> Enstituler { get; set; }
         public IEnumerable<YuksekOkul> YuksekOkullar { get; set; }
         public IEnumerable<MeslekYuksekOkul> MeslekYuksekOkullar { get; set; }
+        public IEnumerable<Haber> Haberler { get; set; }
     }
 }

@@ -216,6 +216,37 @@ namespace DuzceUniTez.Data.Repository
         }
         #endregion
 
+
+        #region Haberler
+        public Haber GetHaber(int id)
+        {
+            return _ctx.Haberler.FirstOrDefault(d => d.Id == id);
+        }
+
+        public List<Haber> GetAllHaberler()
+        {
+            return _ctx.Haberler.ToList();
+        }
+
+        public void AddHaber(Haber haber)
+        {
+            _ctx.Haberler.Add(haber);
+        }
+
+        public void UpdateHaber(Haber haber)
+        {
+            _ctx.Haberler.Update(haber);
+        }
+
+        public void RemoveHaber(int id)
+        {
+            _ctx.Haberler.Remove(GetHaber(id));
+        }
+
+        #endregion
+
+
+
         #region Senkronizasyon
         public async Task<bool> SaveChangesAsync()
         {
@@ -229,7 +260,6 @@ namespace DuzceUniTez.Data.Repository
             }
         }
 
-       
         #endregion
     }
 }

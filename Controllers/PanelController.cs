@@ -346,5 +346,54 @@ namespace DuzceUniTez.Controllers
         }
 
         #endregion
+
+
+        #region Haber CRUD
+
+        public IActionResult Haberler()
+        {
+            var haberler = _repo.GetAllHaberler();
+            return View(haberler);
+        }
+
+        [HttpGet]
+        public IActionResult EditHaberler(int? id)
+        {
+            if (id == null)
+            {
+                return View(new Haber());
+            }
+            else
+            {
+                var haber = _repo.GetHaber((int)id);
+                return View(haber);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditHaberler(Haber haber)
+        {
+            if (haber.Id == 0)
+                _repo.AddHaber(haber);
+            else
+                _repo.UpdateHaber(haber);
+
+            if (await _repo.SaveChangesAsync())
+                return RedirectToAction("Haberler");
+            else
+                return View(haber);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RemoveHaber(int id)
+        {
+            _repo.RemoveHaber(id);
+            await _repo.SaveChangesAsync();
+            return RedirectToAction("Haberler");
+        }
+
+        #endregion
+
+
     }
 }
