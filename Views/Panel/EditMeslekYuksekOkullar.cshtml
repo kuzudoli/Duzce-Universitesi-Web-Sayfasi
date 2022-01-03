@@ -2,33 +2,54 @@
 @{
     Layout = "_PanelLayout";
 }
-<div>
-    <h4>Meslek Yüksekokul Ekle/Güncelle</h4>
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Meslek Yüksekokul Ekle-Düzenle</h3>
+    </div>
     <form asp-controller="Panel" asp-action="EditMeslekYuksekOkullar" method="post">
-        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
         <input asp-for="Id" type="hidden" />
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Meslek Yüksekokul Adı</label>
+                <input asp-for="MeslekYuksekOkulAd" class="form-control" id="exampleInputEmail1" placeholder="Ad">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Meslek Yüksekokul Mail</label>
+                <input type="email" asp-for="MeslekYuksekOkulMail" class="form-control" id="exampleInputEmail1" placeholder="Mail">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Meslek Yüksekokul Tel</label>
+                <input type="tel" asp-for="MeslekYuksekOkulTel" class="form-control" id="exampleInputEmail1" placeholder="Telefon">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Meslek Yüksekokul Adresi</label>
+                <textarea asp-for="MeslekYuksekOkulAdres" class="form-control" rows="3" placeholder="Adres.." style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Meslek Yüksekokul Açıklaması</label>
+                <textarea asp-for="MeslekYuksekOkulAciklama" class="form-control" rows="3" placeholder="Açıklama.." style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
+            </div>
 
-        <div>
-            <label>Meslek Yüksekokul Adı: </label>
-            <input asp-for="MeslekYuksekOkulAd" />
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <br />
-        <div>
-            <label>Meslek Yüksekokul Adres: </label>
-            <input asp-for="MeslekYuksekOkulAdres" />
+        <div class="card-footer" style="float:left">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
         </div>
-        <br />
-        <div>
-            <label>Meslek Yüksekokul Telefon: </label>
-            <input asp-for="MeslekYuksekOkulTel" />
+        <div class="card-footer" style="float:right">
+            <button asp-controller="Panel" asp-action="MeslekYuksekOkullar" class="btn btn-warning">Geri Dön</button>
         </div>
-        <br />
-        <div>
-            <label>Meslek Yüksekokul Mail: </label>
-            <input asp-for="MeslekYuksekOkulMail" />
-        </div>
-        <br />
-        <input type="submit" value="Gönder" />
     </form>
 </div>
 @section scripts{
