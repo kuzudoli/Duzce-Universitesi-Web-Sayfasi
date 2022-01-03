@@ -5,40 +5,54 @@
 
 @* Fakülte silindiğinde altındaki tüm bölümler de beraberinde siliniyor, uyarı gösterilecek. *@
 
-<div>
-    <form asp-controller="Panel" asp-action="EditFakulteler" method="post">
-        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Fakülte Ekle-Düzenle</h3>
+    </div>
+    <form asp-controller="Panel" asp-action="EditFakulte" method="post">
         <input asp-for="Id" type="hidden" />
-        <div>
-            <label>Fakülte Adı: </label>
-            <input asp-for="FakulteAd" />
-        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fakülte Adı</label>
+                <input asp-for="FakulteAd" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Adı">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fakülte Adı</label>
+                <textarea asp-for="FakulteAciklama" class="form-control" rows="3" placeholder="Açıklama..." style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fakülte Adres</label>
+                <textarea asp-for="FakulteAdres" class="form-control" rows="3" placeholder="Adres" style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fakülte Mail</label>
+                <input asp-for="FakulteMail" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Mail">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fakülte Telefon</label>
+                <input asp-for="FakulteTel" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Telefon">
+            </div>
 
-        <div>
-            <label>Fakülte Açıklaması: </label>
-            <br />
-            <textarea asp-for="FakulteAciklama"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="exampleInputFile">Fakulte Görsel</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Görsel Seçin</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Yükle</span>
+                    </div>
+                </div>
+            </div>
 
-        <div>
-            <label>Fakülte Adresi: </label>
-            <br />
-            <textarea asp-for="FakulteAdres"></textarea>
         </div>
-
-        <div>
-            <label>Fakülte Tel: </label>
-            <br />
-            <textarea asp-for="FakulteTel"></textarea>
+        <div class="card-footer" style="float:left">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
         </div>
-
-        <div>
-            <label>Fakülte Mail: </label>
-            <br />
-            <textarea asp-for="FakulteMail"></textarea>
+        <div class="card-footer" style="float:right">
+            <button asp-controller="Panel" asp-action="Etkinlikler" class="btn btn-warning">Geri Dön</button>
         </div>
-
-        <input type="submit" value="Gönder" />
     </form>
 </div>
 @section scripts{

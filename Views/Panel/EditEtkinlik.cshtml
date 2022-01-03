@@ -1,11 +1,10 @@
 ﻿@model Etkinlik
-
 @{
     Layout = "_PanelLayout";
 }
 <div class="card card-primary">
     <div class="card-header">
-        <h3 class="card-title">Duyuru Ekle-Düzenle</h3>
+        <h3 class="card-title">Etkinlik Ekle-Düzenle</h3>
     </div>
     <form asp-controller="Panel" asp-action="EditEtkinlik" method="post">
         <input asp-for="Id" type="hidden" />
