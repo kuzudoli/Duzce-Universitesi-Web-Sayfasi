@@ -1,20 +1,21 @@
 ﻿@model DataViewModel
-
+@{ 
+    Layout = "_SideLayout";
+}
 <section id="first-section">
-    <div class="container-fluid haber-content">
-        <h3 class="pt-3 px-3">DUYURULAR</h3>
+    <div class="container-fluid side-content">
+        <h3 id="baslik" class="pt-3 px-3">DUYURULAR</h3>
         <hr/>
         <div class="row">
             @foreach (Duyuru duyuru in Model.Duyurular)
             {
                 <div class="col-md-3 mb-4">
-                    <a id="haber" asp-controller="Duyuru" asp-action="Duyuru" asp-route-id="@duyuru.Id">
+                    <a id="item" asp-controller="Duyuru" asp-action="Duyuru" asp-route-id="@duyuru.Id">
                         <div class="card">
                             <div class="top-line"></div>
                             <img src="~/imgs/square.png" class="h-50" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">@duyuru.DuyuruBaslik</h5>
-                                <p class="card-text">@duyuru.DuyuruAciklama</p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">@duyuru.DuyuruTarih</small>

@@ -1,5 +1,7 @@
 ﻿@model DataViewModel
-
+@{
+    Layout = "_SideLayout";
+}
 <section id="first-section">
     <div class="container-fluid side-content">
         <div class="row">
@@ -13,7 +15,7 @@
                     <h5>Bölümler</h5>
                     @foreach (var bolum in Model.Bolumler)
                     {
-                        
+
                         <li>@bolum.BolumAdi</li>
                     }
                 </ul>

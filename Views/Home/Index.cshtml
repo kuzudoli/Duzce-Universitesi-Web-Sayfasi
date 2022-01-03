@@ -10,7 +10,7 @@
             <div class="col-md-6 duyuru-etkinlik">
                 @foreach (Duyuru duyuru in Model.Duyurular)
                 {
-                    <a href="#" class="card-link">
+                    <a asp-controller="Duyuru" asp-action="Duyuru" asp-route-id="@duyuru.Id" class="card-link">
                         <div class="inline-card">
                             <img src="imgs/square.png">
                             <div class="inline-card-text">
@@ -24,7 +24,7 @@
             <div class="col-md-6 duyuru-etkinlik">
                 @foreach (Etkinlik etkinlik in Model.Etkinlikler)
                 {
-                    <a href="#" class="card-link">
+                    <a asp-controller="Etkinlik" asp-action="Etkinlik" asp-route-id="@etkinlik.Id" class="card-link">
                         <div class="inline-card">
                             <img src="imgs/square.png">
                             <div class="inline-card-text">
@@ -48,19 +48,20 @@
     <div class="row row-cols-1 row-cols-md-4 g-5 w-100 p-4">
         @foreach (Haber haber in Model.Haberler)
         {
+        <a id="item" asp-controller="Haber" asp-action="haber" asp-route-id="@haber.Id">
             <div class="col">
                 <div class="card">
                     <div class="top-line"></div>
-                    <img src="./imgs/square.png" class="h-50" alt="...">
+                    <img src="./imgs/square.png" class="h-75" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">@haber.HaberBaslik</h5>
-                        <p class="card-text">@haber.HaberAciklama</p>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">@haber.HaberTarih</small>
                     </div>
                 </div>
             </div>
+        </a>
         }
     </div>
 </section>

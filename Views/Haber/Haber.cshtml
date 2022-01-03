@@ -1,5 +1,7 @@
 ﻿@model DataViewModel
-
+@{
+    Layout = "_SideLayout";
+}
 <section id="first-section">
     <div class="container-fluid side-content">
         <div class="row">
@@ -9,7 +11,7 @@
             <div class="col-md-8">
                 <h4 style="margin-bottom:0px;display:inline-block;">@Model.Haber.HaberBaslik</h4>
                 <small class="text-muted" style="float:right"><b>@Model.Haber.HaberKategori | @Model.Haber.HaberTarih</b></small>
-                <hr/>
+                <hr />
                 <p>@Model.Haber.HaberAciklama</p>
             </div>
         </div>
