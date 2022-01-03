@@ -45,13 +45,13 @@
         <img id="logo" src="~/imgs/logo.png">
         <div class="main-nav" id="main-nav">
             <ul class="nav__links">
-                <li><a  asp-controller="Home" asp-action="Index">Üniversitemiz</a></li>
+                <li><a asp-controller="Home" asp-action="Index">Üniversitemiz</a></li>
                 <li>
                     <a>Akademik <i class="fas fa-caret-down"></i></a>
                     <div class="dropdown__menu">
                         <ul>
                             <li>
-                                <a href="#">Fakülteler</a>
+                                <a>Fakülteler</a>
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
@@ -63,37 +63,37 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="#">Ensitüler</a>
+                                <a>Ensitüler</a>
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
                                         @foreach (Enstitu enstitu in Model.Enstituler)
                                         {
-                                            <li><a href="#">@enstitu.EnsitutuAd</a></li>
+                                            <li><a asp-controller="Enstitu" asp-action="Index" asp-route-id="@enstitu.Id" >@enstitu.EnsitutuAd</a></li>
                                         }
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a href="#">Yüksekokullar</a>
+                                <a>Yüksekokullar</a>
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
                                         @foreach (YuksekOkul yuksekOkul in Model.YuksekOkullar)
                                         {
-                                            <li><a href="#">@yuksekOkul.YuksekOkulAd</a></li>
+                                            <li><a asp-controller="YuksekOkul" asp-action="Index" asp-route-id="@yuksekOkul.Id">@yuksekOkul.YuksekOkulAd</a></li>
                                         }
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a href="#">M. Yüksekokulları</a>
+                                <a>M. Yüksekokulları</a>
                                 <i class="fas fa-caret-right"></i>
                                 <div class="dropdown__menu-1">
                                     <ul>
                                         @foreach (MeslekYuksekOkul meslekYuksekOkul in Model.MeslekYuksekOkullar)
                                         {
-                                            <li><a href="#">@meslekYuksekOkul.MeslekYuksekOkulAd</a></li>
+                                            <li><a asp-controller="MeslekYuksekOkul" asp-action="Index" asp-route-id="@meslekYuksekOkul.Id">@meslekYuksekOkul.MeslekYuksekOkulAd</a></li>
                                         }
                                     </ul>
                                 </div>
