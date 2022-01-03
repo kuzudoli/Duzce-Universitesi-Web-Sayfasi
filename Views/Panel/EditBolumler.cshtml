@@ -2,38 +2,57 @@
 @{
     Layout = "_PanelLayout";
 }
-<div>
-    <h4>Bölüm Ekle/Güncelle</h4>
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Bölüm Ekle-Düzenle</h3>
+    </div>
     <form asp-controller="Panel" asp-action="EditBolumler" method="post">
-        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
         <input asp-for="Id" type="hidden" />
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Bölüm Adı</label>
+                <input asp-for="BolumAdi" class="form-control" id="exampleInputEmail1" placeholder="Bölüm Adı">
+            </div>
 
-        <div>
-            <label>Bölüm Adı: </label>
-            <input asp-for="BolumAdi" />
+            <div class="form-group">
+                <label>Bölüm Tipi</label>
+                <select class="form-control select2 select2-hidden-accessible" asp-for="BolumTipi" id="fakulteler" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                    <option value="Lisans">Lisans</option>
+                    <option value="Lisansüstü">Lisansüstü</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Fakülte</label>
+                <select class="form-control select2 select2-hidden-accessible" asp-for="FakulteId" id="fakulteler" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                    @foreach (var fakulte in ViewBag.Funds)
+                    {
+                        <option value="@fakulte.Id">@fakulte.FakulteAd</option>
+                    }
+                </select>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <br />
-        <div>
-            Bölüm Tipi:
-            <select asp-for="BolumTipi">
-                <option value="Lisans">Lisans</option>
-                <option value="Lisansüstü">Lisansüstü</option>
-            </select>
+        <div class="card-footer" style="float:left">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
         </div>
-        <br />
-        <div>
-            Fakülte:
-            <select id="fakulteler" asp-for="FakulteId">
-                @foreach (var fakulte in ViewBag.Funds)
-                {
-                    <option value="@fakulte.Id">@fakulte.FakulteAd</option>
-                }
-            </select>
+        <div class="card-footer" style="float:right">
+            <button asp-controller="Panel" asp-action="Bolumler" class="btn btn-warning">Geri Dön</button>
         </div>
-        <br />
-        <input type="submit" value="Gönder" />
     </form>
 </div>
-@section scripts{
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-}

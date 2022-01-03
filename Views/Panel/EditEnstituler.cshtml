@@ -2,35 +2,58 @@
 @{
     Layout = "_PanelLayout";
 }
-<div>
-    <h4>Enstitu Ekle/Güncelle</h4>
-    <form asp-controller="Panel" asp-action="EditEnstituler" method="post">
-        @*Güncellemede kullanmak için Id bilgisini gizli olarak tutuyoruz *@
-        <input asp-for="Id" type="hidden" />
 
-        <div>
-            <label>Enstitu Adı: </label>
-            <input asp-for="EnsitutuAd" />
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Enstitü Ekle-Düzenle</h3>
+    </div>
+    <form asp-controller="Panel" asp-action="EditEnstituler" method="post">
+        <input asp-for="Id" type="hidden" />
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enstitü Adı</label>
+                <input asp-for="EnsitutuAd" class="form-control" id="exampleInputEmail1" placeholder="Başlık">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Enstitü Adresi</label>
+                <textarea asp-for="EnsitutuAdres" class="form-control" rows="3" placeholder="Adres.." style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Enstitü Açıklaması</label>
+                <textarea asp-for="EnsitutuAciklama" class="form-control" rows="3" placeholder="Açıklama.." style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enstitü Tel</label>
+                <input type="tel" asp-for="EnsitutuTel" class="form-control" id="exampleInputEmail1" placeholder="Başlık">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enstitü Mail</label>
+                <input type="email" asp-for="EnsitutuMail" class="form-control" id="exampleInputEmail1" placeholder="Başlık">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <br />
-        <div>
-            <label>Enstitu Adres: </label>
-            <input asp-for="EnsitutuAdres" />
+        <div class="card-footer" style="float:left">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
         </div>
-        <br />
-        <div>
-            <label>Enstitu Telefon: </label>
-            <input asp-for="EnsitutuTel" />
+        <div class="card-footer" style="float:right">
+            <button asp-controller="Panel" asp-action="Enstituler" class="btn btn-warning">Geri Dön</button>
         </div>
-        <br />
-        <div>
-            <label>Enstitu Mail: </label>
-            <input asp-for="EnsitutuMail" />
-        </div>
-        <br />
-        <input type="submit" value="Gönder" />
     </form>
 </div>
+
 @section scripts{
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 }

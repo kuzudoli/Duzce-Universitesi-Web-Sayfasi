@@ -3,10 +3,11 @@
     Layout = "_PanelLayout";
 }
 <div class="haberler">
-    <a style="display:inline-block;"><h5>HABERLER</h5></a>
+    <center><h5>HABERLER</h5></center>
     <br />
-    <a asp-controller="Panel" class="btn btn-primary" asp-action="EditHaberler">Haber Ekle</a>
-
+    <a asp-controller="Panel" class="btn btn-outline-success" style="float:right" asp-action="EditHaberler">Haber Ekle</a>
+    <br />
+    <br />
 
 
     <table class="table table-striped">
@@ -14,7 +15,6 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Başlık</th>
-                <th scope="col">Açıklama</th>
                 <th scope="col">Kategori</th>
                 <th scope="col">Tarih</th>
                 <th scope="col">#</th>
@@ -27,14 +27,13 @@
                 <tr>
                     <th scope="row">@haber.Id</th>
                     <td>@haber.HaberBaslik</td>
-                    <td>@haber.HaberAciklama</td>
                     <td>@haber.HaberKategori</td>
                     <td>@haber.HaberTarih</td>
                     <td>
-                        <a class="btn btn-primary" asp-controller="Panel" asp-action="EditHaberler" asp-route-id="@haber.Id"> (Düzenle) </a>
+                        <a class="btn btn-outline-info" asp-controller="Panel" asp-action="EditHaberler" asp-route-id="@haber.Id"> (Düzenle) </a>
                     </td>
                     <td>
-                        <a class="btn btn-primary" asp-controller="Panel" asp-action="RemoveHaber" asp-route-id="@haber.Id" > (Kaldır) </a>
+                        <a class="btn btn-outline-danger" asp-controller="Panel" asp-action="RemoveHaber" asp-route-id="@haber.Id" > (Kaldır) </a>
                     </td>
                 </tr>
             }

@@ -2,25 +2,38 @@
 @{
     Layout = "_PanelLayout";
 }
-<div>
-    <a style="display:inline-block;"><h5>DUYURULAR</h5></a>
-    <a asp-controller="Panel" asp-action="Edit" style="display:inline-block;float:right;"><h5>Duyuru Ekle</h5></a>
-    <ul>
-        @foreach (var duyuru in Model)
-        {
-            <li>
-                <a>
-                    @duyuru.DuyuruBaslik
-                </a>
-                -
-                <a asp-controller="Panel" asp-action="Edit" asp-route-id="@duyuru.Id">
-                    (Düzenle)
-                </a>
-                -
-                <a asp-controller="Panel" asp-action="Remove" asp-route-id="@duyuru.Id">
-                    (Kaldır)
-                </a>
-            </li>
-        }
-    </ul>
+<div class="duyurular">
+    <center><h5>DUYURULAR</h5></center>
+    <br />
+    <a asp-controller="Panel" class="btn btn-outline-success" style="float:right" asp-action="Edit">Duyuru Ekle</a>
+    <br />
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Başlık</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var duyuru in Model)
+            {
+                <tr>
+                    <th scope="row">@duyuru.Id</th>
+                    <td>@duyuru.DuyuruBaslik</td>
+                    <td>@duyuru.DuyuruTarih</td>
+                    <td>
+                        <a class="btn btn-outline-info" asp-controller="Panel" asp-action="Edit" asp-route-id="@duyuru.Id">Düzenle</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-danger" asp-controller="Panel" asp-action="Remove" asp-route-id="@duyuru.Id">Kaldır</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

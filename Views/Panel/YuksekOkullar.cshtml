@@ -3,24 +3,38 @@
     Layout = "_PanelLayout";
 }
 <div class="yuksekokullar">
-    <a style="display:inline-block;"><h5>YÜKSEK OKULLAR</h5></a>
-    <a asp-controller="Panel" asp-action="EditYuksekOkullar" style="display:inline-block;float:right;"><h5>Yüksekokul Ekle</h5></a>
-    <ul>
-        @foreach (var yuksekOkul in Model)
-        {
-            <li>
-                <a>
-                    @yuksekOkul.YuksekOkulAd
-                </a>
-                -
-                <a asp-controller="Panel" asp-action="EditYuksekOkullar" asp-route-id="@yuksekOkul.Id">
-                    (Düzenle)
-                </a>
-                -
-                <a asp-controller="Panel" asp-action="RemoveYuksekOkul" asp-route-id="@yuksekOkul.Id">
-                    (Kaldır)
-                </a>
-            </li>
-        }
-    </ul>
+    <center><h5>YÜKSEK OKULLAR</h5></center>
+    <br />
+    <a asp-controller="Panel" class="btn btn-outline-success" style="float:right" asp-action="EditYuksekOkullar">Yüksekokul Ekle</a>
+    <br />
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Ad</th>
+                <th scope="col">Tel</th>
+                <th scope="col">Mail</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var yuksekOkul in Model)
+            {
+                <tr>
+                    <th scope="row">@yuksekOkul.Id</th>
+                    <th scope="row">@yuksekOkul.YuksekOkulAd</th>
+                    <th scope="row">@yuksekOkul.YuksekOkulTel</th>
+                    <th scope="row">@yuksekOkul.YuksekOkulMail</th>
+                    <td>
+                        <a class="btn btn-outline-info" asp-controller="Panel" asp-action="EditYuksekOkullar" asp-route-id="@yuksekOkul.Id">Düzenle</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-danger" asp-controller="Panel" asp-action="RemoveYuksekOkul" asp-route-id="@yuksekOkul.Id">Kaldır</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

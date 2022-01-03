@@ -2,26 +2,38 @@
 @{
     Layout = "_PanelLayout";
 }
-
 <div class="duyurular">
-    <a style="display:inline-block;"><h5>ETKİNLİKLER</h5></a>
-    <a asp-controller="Panel" asp-action="EditEtkinlik" style="display:inline-block;float:right;"><h5>Etkinlik Ekle</h5></a>
-    <ul>
-        @foreach (var etkinlik in Model)
-        {
-            <li>
-                <a>
-                    @etkinlik.EtkinlikBaslik
-                </a>
-                -
-                <a asp-controller="Panel" asp-action="EditEtkinlik" asp-route-id="@etkinlik.Id">
-                    (Düzenle)
-                </a>
-                -
-                <a asp-controller="Panel" asp-action="RemoveEtkinlik" asp-route-id="@etkinlik.Id">
-                    (Kaldır)
-                </a>
-            </li>
-        }
-    </ul>
+    <center><h5>ETKİNLİKLER</h5></center>
+    <br />
+    <a asp-controller="Panel" class="btn btn-outline-success" style="float:right" asp-action="EditEtkinlik">Etkinlik Ekle</a>
+    <br />
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Başlık</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var etkinlik in Model)
+            {
+                <tr>
+                    <th scope="row">@etkinlik.Id</th>
+                    <th scope="row">@etkinlik.EtkinlikBaslik</th>
+                    <th scope="row">@etkinlik.EtkinlikTarih</th>
+                    <td>
+                        <a class="btn btn-outline-info" asp-controller="Panel" asp-action="EditEtkinlik" asp-route-id="@etkinlik.Id">Düzenle</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-danger" asp-controller="Panel" asp-action="RemoveEtkinlik" asp-route-id="@etkinlik.Id">Kaldır</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
