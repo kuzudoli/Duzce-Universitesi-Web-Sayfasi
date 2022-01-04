@@ -23,7 +23,29 @@ namespace DuzceUniTez.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            DataCollectionViewModel mymodel = new DataCollectionViewModel();
+
+            mymodel.Duyurular = _repo.GetAllDuyurular();
+            mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
+            mymodel.Haberler = _repo.GetAllHaberler().TakeLast(4).Reverse();
+            mymodel.Fakulteler = _repo.GetAllFakulteler();
+            mymodel.Bolumler = _repo.GetAllBolumler();
+            mymodel.Enstituler = _repo.GetAllEnstituler();
+            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
+            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
+
+            ViewBag.duyuruSayisi = _repo.GetAllDuyurular().Count();
+            ViewBag.etkinlikSayisi = _repo.GetAllEtkinlikler().Count();
+            ViewBag.haberSayisi = _repo.GetAllHaberler().Count();
+            ViewBag.fakulteSayisi = _repo.GetAllFakulteler().Count();
+            ViewBag.bolumSayisi = _repo.GetAllBolumler().Count();
+            ViewBag.bolumSayisiLisans = _repo.GetAllBolumler().Where(b => b.BolumTipi == "Lisans").Count();
+            ViewBag.lisansustuBolumSayisiLisansUstu = _repo.GetAllBolumler().Where(b => b.BolumTipi == "Lisansüstü").Count();
+            ViewBag.enstituSayisi = _repo.GetAllEnstituler().Count();
+            ViewBag.yuksekOkulSayisi = _repo.GetAllYuksekOkullar().Count();
+            ViewBag.meslekYuksekOkulSayisi = _repo.GetAllMeslekYuksekOkullar().Count();
+
+            return View(mymodel);
         }
 
         #region Duyuru CRUD
