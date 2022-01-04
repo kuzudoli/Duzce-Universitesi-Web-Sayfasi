@@ -17,7 +17,7 @@
                 <input asp-for="FakulteAd" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Adı">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Fakülte Adı</label>
+                <label for="exampleInputEmail1">Fakülte Açıklama</label>
                 <textarea asp-for="FakulteAciklama" class="form-control" rows="3" placeholder="Açıklama..." style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
             </div>
             <div class="form-group">
@@ -37,6 +37,7 @@
                 <label for="exampleInputFile">Fakülte Görsel</label>
                 <div class="input-group">
                     <div class="custom-file">
+                        <input type="hidden" asp-for="yukluFakulteResim" class="custom-file-input" id="exampleInputFile">
                         <input type="file" asp-for="FakulteResim" class="custom-file-input" id="exampleInputFile">
                         <label class="custom-file-label" for="exampleInputFile">Görsel Seçiniz...</label>
                     </div>

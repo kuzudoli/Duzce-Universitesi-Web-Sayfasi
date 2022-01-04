@@ -14,6 +14,7 @@ namespace DuzceUniTez.ViewModels
         public string FakulteAciklama { get; set; } = "";
 
         public IFormFile FakulteResim { get; set; } = null;
+        public string yukluFakulteResim { get; set; } = null;
 
         public string FakulteAdres { get; set; } = "";
         public string FakulteTel { get; set; } = "";

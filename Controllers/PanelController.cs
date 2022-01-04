@@ -157,7 +157,16 @@ namespace DuzceUniTez.Controllers
             else
             {
                 var fakulte = _repo.GetFakulte((int)id);
-                return View(fakulte);
+                return View(new FakulteViewModel {
+                    Id = fakulte.Id,
+                    FakulteAd = fakulte.FakulteAd,
+                    FakulteAciklama = fakulte.FakulteAciklama,
+                    FakulteAdres = fakulte.FakulteAdres,
+                    FakulteMail = fakulte.FakulteMail,
+                    FakulteTel = fakulte.FakulteTel,
+                    Bolumler = fakulte.Bolumler,
+                    yukluFakulteResim = fakulte.FakulteResim
+                });
             }
         }
 
@@ -172,9 +181,19 @@ namespace DuzceUniTez.Controllers
                 FakulteAdres = vm.FakulteAdres,
                 FakulteMail = vm.FakulteMail,
                 FakulteTel = vm.FakulteTel,
-                FakulteResim = await _fileManager.SaveImage(vm.FakulteResim),
                 Bolumler = vm.Bolumler
             };
+
+
+            if(vm.FakulteResim == null)
+                fakulte.FakulteResim = vm.yukluFakulteResim;
+            else {
+                if (!string.IsNullOrEmpty(vm.yukluFakulteResim))
+                    _fileManager.RemoveImage(vm.yukluFakulteResim);
+
+                fakulte.FakulteResim = await _fileManager.SaveImage(vm.FakulteResim);
+            }
+
 
             if (fakulte.Id == 0)
                 _repo.AddFakulte(fakulte);

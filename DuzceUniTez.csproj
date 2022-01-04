@@ -23,6 +23,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.12" />
+    <PackageReference Include="PhotoSauce.MagicScaler" Version="0.12.2" />
   </ItemGroup>
 
   <ItemGroup>
