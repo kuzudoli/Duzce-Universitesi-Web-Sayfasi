@@ -129,7 +129,7 @@ namespace DuzceUniTez.Controllers
         public IActionResult EditFakulteler(int? id)
         {
             if (id == null)
-                return View(new Fakulte());
+                return View(new FakulteViewModel());
             else
             {
                 var fakulte = _repo.GetFakulte((int)id);
@@ -138,8 +138,20 @@ namespace DuzceUniTez.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditFakulteler(Fakulte fakulte)
+        public async Task<IActionResult> EditFakulteler(FakulteViewModel vm)
         {
+            Fakulte fakulte = new Fakulte()
+            {
+                Id = vm.Id,
+                FakulteAd = vm.FakulteAd,
+                FakulteAciklama = vm.FakulteAciklama,
+                FakulteAdres = vm.FakulteAdres,
+                FakulteMail = vm.FakulteMail,
+                FakulteTel = vm.FakulteTel,
+                FakulteResim = "",
+                Bolumler = vm.Bolumler
+            };
+
             if (fakulte.Id == 0)
                 _repo.AddFakulte(fakulte);
             else

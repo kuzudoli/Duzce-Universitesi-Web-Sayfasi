@@ -11,7 +11,7 @@ namespace DuzceUniTez.Models
         public string FakulteAd { get; set; } = "";
         public string FakulteAciklama { get; set; } = "";
 
-        //Fakulte Resmi Eklenecek.
+        public string FakulteResim { get; set; } = "";
 
         public string FakulteAdres { get; set; }
         public string FakulteTel { get; set; }

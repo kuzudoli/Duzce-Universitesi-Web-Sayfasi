@@ -1,4 +1,5 @@
 ﻿using DuzceUniTez.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,5 @@ namespace DuzceUniTez.ViewModels
         public Haber Haber { get; set; }
         public Duyuru Duyuru { get; set; }
         public Etkinlik Etkinlik { get; set; }
-        //public IEnumerable<Bolum> Bolumler { get; set; }
     }
 }
