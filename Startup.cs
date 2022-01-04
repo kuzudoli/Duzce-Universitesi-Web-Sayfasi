@@ -1,4 +1,5 @@
 using DuzceUniTez.Data;
+using DuzceUniTez.Data.FileManager;
 using DuzceUniTez.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,6 +45,7 @@ namespace DuzceUniTez
             });
 
             services.AddTransient<IRepository, Repository>();
+            services.AddTransient<IFileManager, FileManager>();
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
             

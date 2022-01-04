@@ -1,4 +1,5 @@
-﻿using DuzceUniTez.Data.Repository;
+﻿using DuzceUniTez.Data.FileManager;
+using DuzceUniTez.Data.Repository;
 using DuzceUniTez.Models;
 using DuzceUniTez.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -15,10 +16,11 @@ namespace DuzceUniTez.Controllers
     public class PanelController : Controller
     {
         private IRepository _repo;
-
-        public PanelController(IRepository repo)
+        private IFileManager _fileManager;
+        public PanelController(IRepository repo, IFileManager fileManager)
         {
             _repo = repo;
+            _fileManager = fileManager;
         }
 
         public IActionResult Index()
@@ -148,7 +150,7 @@ namespace DuzceUniTez.Controllers
                 FakulteAdres = vm.FakulteAdres,
                 FakulteMail = vm.FakulteMail,
                 FakulteTel = vm.FakulteTel,
-                FakulteResim = "",
+                FakulteResim = await _fileManager.SaveImage(vm.FakulteResim),
                 Bolumler = vm.Bolumler
             };
 

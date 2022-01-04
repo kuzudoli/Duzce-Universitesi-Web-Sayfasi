@@ -1,4 +1,5 @@
-﻿using DuzceUniTez.Data.Repository;
+﻿using DuzceUniTez.Data.FileManager;
+using DuzceUniTez.Data.Repository;
 using DuzceUniTez.Models;
 using DuzceUniTez.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace DuzceUniTez.Controllers
     public class FakulteController : Controller
     {
         private IRepository _repo;
+        private IFileManager _fileManager;
 
-        public FakulteController(IRepository repo)
+        public FakulteController(IRepository repo, IFileManager fileManager)
         {
             _repo = repo;
+            _fileManager = fileManager;
         }
 
         public IActionResult Index(int id)
@@ -34,6 +37,12 @@ namespace DuzceUniTez.Controllers
             mymodel.Fakulte = _repo.GetFakulte(id);
 
             return View(mymodel);
+        }
+        [HttpGet("/Image/{image}")]
+        public IActionResult Image(string image)
+        {
+            var mime = image.Substring(image.LastIndexOf('.')+1);
+            return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
         }
     }
 }
