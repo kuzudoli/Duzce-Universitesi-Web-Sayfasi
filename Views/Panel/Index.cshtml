@@ -1,5 +1,178 @@
-﻿@{ 
+﻿@model DataCollectionViewModel
+@{
     Layout = "_PanelLayout";
 }
-
-<h4>Home Page</h4>
+<br />
+<center><h4></h4></center>
+<!-- Small Box (Stat card) -->
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h5>
+                    Duyuru Sayısı
+                </h5>
+                <p>
+                    @ViewBag.duyuruSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="Duyurular" class="small-box-footer">
+                Duyurular <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h5>
+                    Haber Sayısı
+                </h5>
+                <p>
+                    @ViewBag.haberSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-newspaper"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="Haberler" class="small-box-footer">
+                Haberler <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h5>
+                    Etkinlik Sayısı
+                </h5>
+                <p>
+                    @ViewBag.etkinlikSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="Etkinlikler" class="small-box-footer">
+                Etkinlikler <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h5>
+                    Fakülte Sayısı
+                </h5>
+                <p>
+                    @ViewBag.fakulteSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="Fakulteler" class="small-box-footer">
+                Fakülteler <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col --> 
+    
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h5>
+                    Bölüm Sayısı
+                </h5>
+                <p>
+                    @ViewBag.bolumSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="Bolumler" class="small-box-footer">
+                Bölümler <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col -->
+    
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h5>
+                    Enstitü Sayısı
+                </h5>
+                <p>
+                    @ViewBag.enstituSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="Enstituler" class="small-box-footer">
+                Enstitüler <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col -->
+    
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h5>
+                    Yüksekokul Sayısı
+                </h5>
+                <p>
+                    @ViewBag.yuksekOkulSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="Yuksekokullar" class="small-box-footer">
+                Yüksekokullar <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col --> 
+    
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h5>
+                    M. Yüksekokul Sayısı
+                </h5>
+                <p>
+                    @ViewBag.meslekYuksekOkulSayisi
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <a asp-controller="Panel" asp-action="MeslekYuksekokullar" class="small-box-footer">
+                Meslek Yüksekokullar <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col -->
+</div>
+<!-- /.row -->
