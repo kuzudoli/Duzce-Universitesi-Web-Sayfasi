@@ -9,7 +9,7 @@
     <div class="card-header">
         <h3 class="card-title">Fakülte Ekle-Düzenle</h3>
     </div>
-    <form asp-controller="Panel" asp-action="EditFakulte" method="post">
+    <form asp-controller="Panel" asp-action="EditFakulteler" method="post">
         <input asp-for="Id" type="hidden" />
         <div class="card-body">
             <div class="form-group">
@@ -17,7 +17,7 @@
                 <input asp-for="FakulteAd" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Adı">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Fakülte Adı</label>
+                <label for="exampleInputEmail1">Fakülte Açıklama</label>
                 <textarea asp-for="FakulteAciklama" class="form-control" rows="3" placeholder="Açıklama..." style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
             </div>
             <div class="form-group">
@@ -26,11 +26,11 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Fakülte Mail</label>
-                <input asp-for="FakulteMail" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Mail">
+                <input asp-for="FakulteMail" type="email" class="form-control" id="exampleInputEmail1" placeholder="Mail">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Fakülte Telefon</label>
-                <input asp-for="FakulteTel" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Telefon">
+                <input asp-for="FakulteTel" type="tel" class="form-control" id="exampleInputEmail1" placeholder="Telefon">
             </div>
 
             <div class="form-group">
@@ -51,7 +51,7 @@
             <button type="submit" class="btn btn-primary">Kaydet</button>
         </div>
         <div class="card-footer" style="float:right">
-            <button asp-controller="Panel" asp-action="Etkinlikler" class="btn btn-warning">Geri Dön</button>
+            <button asp-controller="Panel" asp-action="Fakulteler" class="btn btn-warning">Geri Dön</button>
         </div>
     </form>
 </div>
