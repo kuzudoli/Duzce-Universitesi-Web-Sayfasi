@@ -9,11 +9,12 @@
         <div class="row">
             @foreach (Duyuru duyuru in Model.Duyurular)
             {
+                var image_path = $"/Image/{duyuru.DuyuruResim}";
                 <div class="col-md-3 mb-4">
                     <a id="item" asp-controller="Duyuru" asp-action="Duyuru" asp-route-id="@duyuru.Id">
                         <div class="card">
                             <div class="top-line"></div>
-                            <img src="~/imgs/square.png" class="h-50" alt="...">
+                            <img src="@image_path" class="h-50" />
                             <div class="card-body">
                                 <h5 class="card-title">@duyuru.DuyuruBaslik</h5>
                             </div>

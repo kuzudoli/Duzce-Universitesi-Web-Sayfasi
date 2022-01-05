@@ -63,18 +63,43 @@ namespace DuzceUniTez.Controllers
         public IActionResult Edit(int? id)
         {
             if (id == null)
-                return View(new Duyuru());
+                return View(new DuyuruViewModel());
             else
             {
                 var duyuru = _repo.GetDuyuru((int)id);
-                return View(duyuru);
+                return View(new DuyuruViewModel
+                {
+                    Id = duyuru.Id,
+                    DuyuruBaslik = duyuru.DuyuruBaslik,
+                    DuyuruAciklama = duyuru.DuyuruAciklama,
+                    DuyuruTarih = duyuru.DuyuruTarih,
+                    yukluDuyuruResim = duyuru.DuyuruResim
+                });
             }
         }
 
         [HttpPost]
         //Asenkron görev olarak tanımlanıyor
-        public async Task<IActionResult> Edit(Duyuru duyuru)
+        public async Task<IActionResult> Edit(DuyuruViewModel vm)
         {
+            Duyuru duyuru = new Duyuru()
+            {
+                Id = vm.Id,
+                DuyuruBaslik = vm.DuyuruBaslik,
+                DuyuruAciklama = vm.DuyuruAciklama,
+                DuyuruTarih = vm.DuyuruTarih
+            };
+
+            if (vm.DuyuruResim == null)
+                duyuru.DuyuruResim = vm.yukluDuyuruResim;
+            else
+            {
+                if (!string.IsNullOrEmpty(vm.yukluDuyuruResim))
+                    _fileManager.RemoveImage(vm.yukluDuyuruResim);
+
+                duyuru.DuyuruResim = await _fileManager.SaveImage(vm.DuyuruResim);
+            }
+
             if (duyuru.Id == 0)
                 _repo.AddDuyuru(duyuru);
             else
