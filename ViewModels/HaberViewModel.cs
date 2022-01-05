@@ -1,21 +1,21 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DuzceUniTez.Models
+namespace DuzceUniTez.ViewModels
 {
-    public class Haber
+    public class HaberViewModel
     {
         public int Id { get; set; }
         public string HaberBaslik { get; set; }
         public string HaberAciklama { get; set; }
         public string HaberKategori { get; set; }
 
-        public string HaberResim { get; set; } = "";
+        public IFormFile HaberResim { get; set; } = null;
+        public string yukluHaberResim { get; set; } = null;
 
         public DateTime HaberTarih { get; set; } = DateTime.Now;
-
     }
 }

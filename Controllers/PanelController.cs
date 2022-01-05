@@ -541,7 +541,6 @@ namespace DuzceUniTez.Controllers
 
         #endregion
 
-
         #region Haber CRUD
 
         public IActionResult Haberler()
@@ -555,18 +554,45 @@ namespace DuzceUniTez.Controllers
         {
             if (id == null)
             {
-                return View(new Haber());
+                return View(new HaberViewModel());
             }
             else
             {
                 var haber = _repo.GetHaber((int)id);
-                return View(haber);
+                return View(new HaberViewModel
+                {
+                    Id=haber.Id,
+                    HaberBaslik=haber.HaberBaslik,
+                    HaberAciklama=haber.HaberAciklama,
+                    HaberKategori=haber.HaberKategori,
+                    HaberTarih=haber.HaberTarih,
+                    yukluHaberResim = haber.HaberResim
+                });
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditHaberler(Haber haber)
+        public async Task<IActionResult> EditHaberler(HaberViewModel vm)
         {
+            Haber haber = new Haber
+            {
+                Id = vm.Id,
+                HaberBaslik = vm.HaberBaslik,
+                HaberAciklama = vm.HaberAciklama,
+                HaberKategori = vm.HaberKategori,
+                HaberTarih = vm.HaberTarih
+            };
+
+            if (vm.HaberResim == null)
+                haber.HaberResim = vm.yukluHaberResim;
+            else
+            {
+                if (!string.IsNullOrEmpty(vm.yukluHaberResim))
+                    _fileManager.RemoveImage(vm.yukluHaberResim);
+
+                haber.HaberResim = await _fileManager.SaveImage(vm.HaberResim);
+            }
+
             if (haber.Id == 0)
                 _repo.AddHaber(haber);
             else
