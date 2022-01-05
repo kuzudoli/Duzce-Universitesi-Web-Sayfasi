@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace DuzceUniTez.Controllers
 {
-    public class HaberController : Controller
+    public class HaberController : MenuController
     {
         private IRepository _repo;
         private IFileManager _fileManager;
 
-        public HaberController(IRepository repo, IFileManager fileManager)
+        public HaberController(IRepository repo, IFileManager fileManager):base(repo)
         {
             _repo = repo;
             _fileManager = fileManager;
@@ -24,25 +24,19 @@ namespace DuzceUniTez.Controllers
         {
             DataViewModel mymodel = new DataViewModel();
             //menu
-            mymodel.Fakulteler = _repo.GetAllFakulteler();
-            mymodel.Enstituler = _repo.GetAllEnstituler();
-            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
-            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
-
+            mymodel = GetMenu(mymodel);
             mymodel.Haberler = _repo.GetAllHaberler();
+
             return View(mymodel);
         }
 
         public IActionResult Haber(int id)
         {
             DataViewModel mymodel = new DataViewModel();
-
-            mymodel.Fakulteler = _repo.GetAllFakulteler();
-            mymodel.Enstituler = _repo.GetAllEnstituler();
-            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
-            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
-
+            //menu
+            mymodel = GetMenu(mymodel);
             mymodel.Haber = _repo.GetHaber(id);
+
             return View(mymodel);
         }
     }

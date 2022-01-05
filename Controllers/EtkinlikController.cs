@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace DuzceUniTez.Controllers
 {
-    public class EtkinlikController : Controller
+    public class EtkinlikController : MenuController
     {
         private IRepository _repo;
         private IFileManager _fileManager;
 
-        public EtkinlikController(IRepository repo, IFileManager fileManager)
+        public EtkinlikController(IRepository repo, IFileManager fileManager):base(repo)
         {
             _repo = repo;
             _fileManager = fileManager;
@@ -24,25 +24,19 @@ namespace DuzceUniTez.Controllers
         {
             DataViewModel mymodel = new DataViewModel();
             //menu
-            mymodel.Fakulteler = _repo.GetAllFakulteler();
-            mymodel.Enstituler = _repo.GetAllEnstituler();
-            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
-            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
-
+            mymodel = GetMenu(mymodel);
             mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
+
             return View(mymodel);
         }
 
         public IActionResult Etkinlik(int id)
         {
             DataViewModel mymodel = new DataViewModel();
-
-            mymodel.Fakulteler = _repo.GetAllFakulteler();
-            mymodel.Enstituler = _repo.GetAllEnstituler();
-            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
-            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
-
+            //menu
+            mymodel = GetMenu(mymodel);
             mymodel.Etkinlik = _repo.GetEtkinlik(id);
+
             return View(mymodel);
         }
     }

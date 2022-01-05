@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace DuzceUniTez.Controllers
 {
-    public class DuyuruController : Controller
+    public class DuyuruController : MenuController
     {
         private IRepository _repo;
         private IFileManager _fileManager;
 
-        public DuyuruController(IRepository repo, IFileManager fileManager)
+        public DuyuruController(IRepository repo, IFileManager fileManager) : base(repo)
         {
             _repo = repo;
             _fileManager = fileManager;
@@ -24,25 +24,19 @@ namespace DuzceUniTez.Controllers
         {
             DataViewModel mymodel = new DataViewModel();
             //menu
-            mymodel.Fakulteler = _repo.GetAllFakulteler();
-            mymodel.Enstituler = _repo.GetAllEnstituler();
-            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
-            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
-
+            mymodel = GetMenu(mymodel);
             mymodel.Duyurular = _repo.GetAllDuyurular();
+
             return View(mymodel);
         }
 
         public IActionResult Duyuru(int id)
         {
             DataViewModel mymodel = new DataViewModel();
-
-            mymodel.Fakulteler = _repo.GetAllFakulteler();
-            mymodel.Enstituler = _repo.GetAllEnstituler();
-            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
-            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
-
+            //menu
+            mymodel = GetMenu(mymodel);
             mymodel.Duyuru = _repo.GetDuyuru(id);
+
             return View(mymodel);
         }
 

@@ -65,5 +65,6 @@ namespace DuzceUniTez.Controllers
             var etkinlikler = _repo.GetAllEtkinlikler();
             return View(etkinlikler);
         }
+
     }
 }

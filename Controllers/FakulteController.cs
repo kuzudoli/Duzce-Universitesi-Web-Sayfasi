@@ -25,8 +25,6 @@ namespace DuzceUniTez.Controllers
         {
             DataViewModel mymodel = new DataViewModel();
             //menu
-            mymodel.Duyurular = _repo.GetAllDuyurular();
-            mymodel.Etkinlikler = _repo.GetAllEtkinlikler();
             mymodel.Fakulteler = _repo.GetAllFakulteler();
             mymodel.Enstituler = _repo.GetAllEnstituler();
             mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
