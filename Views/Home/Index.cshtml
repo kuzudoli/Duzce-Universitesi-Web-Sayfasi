@@ -1,6 +1,6 @@
 ﻿@model DataCollectionViewModel
 @{
-
+    var image_path="null";
 }
 
 <!--MAIN CONTENT-->
@@ -10,9 +10,10 @@
             <div class="col-md-6 duyuru-etkinlik">
                 @foreach (Duyuru duyuru in Model.Duyurular)
                 {
+                    image_path= $"/Image/{duyuru.DuyuruResim}";
                     <a asp-controller="Duyuru" asp-action="Duyuru" asp-route-id="@duyuru.Id" class="card-link">
                         <div class="inline-card">
-                            <img src="imgs/square.png">
+                            <img src="@image_path">
                             <div class="inline-card-text">
                                 <h5>@duyuru.DuyuruBaslik</h5>
                                 <p>@duyuru.DuyuruAciklama</p>
@@ -24,9 +25,10 @@
             <div class="col-md-6 duyuru-etkinlik">
                 @foreach (Etkinlik etkinlik in Model.Etkinlikler)
                 {
+                    image_path= $"/Image/{etkinlik.EtkinlikResim}";
                     <a asp-controller="Etkinlik" asp-action="Etkinlik" asp-route-id="@etkinlik.Id" class="card-link">
                         <div class="inline-card">
-                            <img src="imgs/square.png">
+                            <img src="@image_path">
                             <div class="inline-card-text">
                                 <h5>@etkinlik.EtkinlikBaslik</h5>
                                 <p>@etkinlik.EtkinlikAciklama</p>
@@ -48,20 +50,21 @@
     <div class="row row-cols-1 row-cols-md-4 g-5 w-100 p-4">
         @foreach (Haber haber in Model.Haberler)
         {
-        <a id="item" asp-controller="Haber" asp-action="haber" asp-route-id="@haber.Id">
-            <div class="col">
-                <div class="card">
-                    <div class="top-line"></div>
-                    <img src="./imgs/square.png" class="h-75" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">@haber.HaberBaslik</h5>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">@haber.HaberTarih</small>
+            image_path= $"/Image/{haber.HaberResim}";
+            <a id="item" asp-controller="Haber" asp-action="haber" asp-route-id="@haber.Id">
+                <div class="col">
+                    <div class="card">
+                        <div class="top-line"></div>
+                        <img src="@image_path" class="h-75" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@haber.HaberBaslik</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">@haber.HaberTarih</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
         }
     </div>
 </section>

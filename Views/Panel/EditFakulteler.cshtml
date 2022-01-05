@@ -24,13 +24,15 @@
                 <label for="exampleInputEmail1">Fakülte Adres</label>
                 <textarea asp-for="FakulteAdres" class="form-control" rows="3" placeholder="Adres" style="margin-top: 0px; margin-bottom: 0px; height: 75px;"></textarea>
             </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Fakülte Mail</label>
-                <input asp-for="FakulteMail" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Mail">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" asp-for="FakulteMail" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Fakülte Telefon</label>
-                <input asp-for="FakulteTel" class="form-control" id="exampleInputEmail1" placeholder="Fakülte Telefon">
+                <input type="tel" asp-for="FakulteTel" class="form-control" id="exampleInputEmail1" placeholder="(0___) - ___ - __ - __">
             </div>
 
             <div class="form-group">
@@ -45,10 +47,10 @@
             </div>
 
         </div>
-        <div class="card-footer" style="float:left">
+        <div class="card-footer" style="float:left;background-color:white">
             <button type="submit" class="btn btn-primary">Kaydet</button>
         </div>
-        <div class="card-footer" style="float:right">
+        <div class="card-footer" style="float:right;background-color:white">
             <button asp-controller="Panel" asp-action="Fakulteler" class="btn btn-warning">Geri Dön</button>
         </div>
     </form>

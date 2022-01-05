@@ -241,23 +241,24 @@ section {
     background-color: #f7f7f7;
     transition: 0.5s;
 }
+
 .inline-card-text {
     width: 74%;
     white-space: nowrap;
-    overflow-x:hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
-    float:right;
+    float: right;
 }
 
-    .inline-card img {
-        width: 100px;
-        margin-right: 10px;
-    }
+.inline-card img {
+    width: 100px;
+    margin-right: 10px;
+}
 
-    .inline-card img,
-    .inline-card .inline-card-text {
-        display: inline-block;
-    }
+.inline-card img,
+.inline-card .inline-card-text {
+    display: inline-block;
+}
 
 .card-link {
     margin: 0 !important;
