@@ -413,11 +413,11 @@ namespace DuzceUniTez.Controllers
                 {
                     Id = yuksekOkul.Id,
                     YuksekOkulAd = yuksekOkul.YuksekOkulAd,
-                    YuksekOkulAciklama=yuksekOkul.YuksekOkulAciklama,
-                    YuksekOkulAdres=yuksekOkul.YuksekOkulAdres,
-                    YuksekOkulTel=yuksekOkul.YuksekOkulTel,
-                    YuksekOkulMail=yuksekOkul.YuksekOkulMail,
-                    yukluYuksekOkulResim=yuksekOkul.YuksekOkulResim
+                    YuksekOkulAciklama = yuksekOkul.YuksekOkulAciklama,
+                    YuksekOkulAdres = yuksekOkul.YuksekOkulAdres,
+                    YuksekOkulTel = yuksekOkul.YuksekOkulTel,
+                    YuksekOkulMail = yuksekOkul.YuksekOkulMail,
+                    yukluYuksekOkulResim = yuksekOkul.YuksekOkulResim
                 });
             }
         }
@@ -479,18 +479,47 @@ namespace DuzceUniTez.Controllers
         {
             if (id == null)
             {
-                return View(new MeslekYuksekOkul());
+                return View(new MeslekYuksekOkulViewModel());
             }
             else
             {
                 var meslekYuksekOkul = _repo.GetMeslekYuksekOkul((int)id);
-                return View(meslekYuksekOkul);
+                return View(new MeslekYuksekOkulViewModel
+                {
+                    Id = meslekYuksekOkul.Id,
+                    MeslekYuksekOkulAd = meslekYuksekOkul.MeslekYuksekOkulAd,
+                    MeslekYuksekOkulAciklama = meslekYuksekOkul.MeslekYuksekOkulAciklama,
+                    MeslekYuksekOkulAdres = meslekYuksekOkul.MeslekYuksekOkulAdres,
+                    MeslekYuksekOkulTel = meslekYuksekOkul.MeslekYuksekOkulTel,
+                    MeslekYuksekOkulMail = meslekYuksekOkul.MeslekYuksekOkulMail,
+                    yukluMeslekYuksekOkulResim = meslekYuksekOkul.MeslekYuksekOkulResim
+                });
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditMeslekYuksekOkullar(MeslekYuksekOkul meslekYuksekOkul)
+        public async Task<IActionResult> EditMeslekYuksekOkullar(MeslekYuksekOkulViewModel vm)
         {
+            MeslekYuksekOkul meslekYuksekOkul = new MeslekYuksekOkul
+            {
+                Id = vm.Id,
+                MeslekYuksekOkulAd = vm.MeslekYuksekOkulAd,
+                MeslekYuksekOkulAciklama = vm.MeslekYuksekOkulAciklama,
+                MeslekYuksekOkulAdres = vm.MeslekYuksekOkulAdres,
+                MeslekYuksekOkulTel = vm.MeslekYuksekOkulTel,
+                MeslekYuksekOkulMail = vm.MeslekYuksekOkulMail
+            };
+
+            if (vm.MeslekYuksekOkulResim == null)
+                meslekYuksekOkul.MeslekYuksekOkulResim = vm.yukluMeslekYuksekOkulResim;
+            else
+            {
+                if (!string.IsNullOrEmpty(vm.yukluMeslekYuksekOkulResim))
+                    _fileManager.RemoveImage(vm.yukluMeslekYuksekOkulResim);
+
+                meslekYuksekOkul.MeslekYuksekOkulResim = await _fileManager.SaveImage(vm.MeslekYuksekOkulResim);
+            }
+
             if (meslekYuksekOkul.Id == 0)
                 _repo.AddMeslekYuksekOkul(meslekYuksekOkul);
             else

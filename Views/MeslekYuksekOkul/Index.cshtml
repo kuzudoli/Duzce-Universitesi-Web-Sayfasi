@@ -1,12 +1,13 @@
 ﻿@model DataViewModel
 @{
     Layout = "_SideLayout";
+    var image_path = $"/Image/{Model.MeslekYuksekOkul.MeslekYuksekOkulResim}";
 }
 <section id="first-section">
     <div class="container-fluid side-content">
         <div class="row">
             <div class="col-md-4">
-                <div id="fakulteImg"></div>
+                <img src="@image_path" />
             </div>
             <div class="col-md-8">
                 <h4>@Model.MeslekYuksekOkul.MeslekYuksekOkulAd</h4>
