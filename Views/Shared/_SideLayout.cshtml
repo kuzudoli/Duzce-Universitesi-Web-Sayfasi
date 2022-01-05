@@ -69,7 +69,7 @@
                                     <ul>
                                         @foreach (Enstitu enstitu in Model.Enstituler)
                                         {
-                                            <li><a href="#">@enstitu.EnsitutuAd</a></li>
+                                            <li><a asp-controller="Enstitu" asp-action="Index" asp-route-id="@enstitu.Id">@enstitu.EnsitutuAd</a></li>
                                         }
                                     </ul>
                                 </div>
@@ -81,7 +81,7 @@
                                     <ul>
                                         @foreach (YuksekOkul yuksekOkul in Model.YuksekOkullar)
                                         {
-                                            <li><a href="#">@yuksekOkul.YuksekOkulAd</a></li>
+                                            <li><a asp-controller="YuksekOkul" asp-action="Index" asp-route-id="@yuksekOkul.Id">@yuksekOkul.YuksekOkulAd</a></li>
                                         }
                                     </ul>
                                 </div>
@@ -93,7 +93,7 @@
                                     <ul>
                                         @foreach (MeslekYuksekOkul meslekYuksekOkul in Model.MeslekYuksekOkullar)
                                         {
-                                            <li><a href="#">@meslekYuksekOkul.MeslekYuksekOkulAd</a></li>
+                                            <li><a  asp-controller="MeslekYuksekOkul" asp-action="Index" asp-route-id="@meslekYuksekOkul.Id">@meslekYuksekOkul.MeslekYuksekOkulAd</a></li>
                                         }
                                     </ul>
                                 </div>
