@@ -9,11 +9,12 @@
         <div class="row">
             @foreach (Etkinlik etkinlik in Model.Etkinlikler)
             {
+                var image_path = $"/Image/{etkinlik.EtkinlikResim}";
                 <div class="col-md-3 mb-4">
                     <a id="item" asp-controller="Etkinlik" asp-action="Etkinlik" asp-route-id="@etkinlik.Id">
                         <div class="card">
                             <div class="top-line"></div>
-                            <img src="~/imgs/square.png" class="h-50" alt="...">
+                            <img src="@image_path" class="h-50" />
                             <div class="card-body">
                                 <h5 class="card-title">@etkinlik.EtkinlikBaslik</h5>
                                 <p class="card-text">@etkinlik.EtkinlikAciklama</p>

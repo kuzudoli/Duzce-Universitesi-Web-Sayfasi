@@ -46,11 +46,5 @@ namespace DuzceUniTez.Controllers
             return View(mymodel);
         }
 
-        [HttpGet("/Image/{image}")]
-        public IActionResult Image(string image)
-        {
-            var mime = image.Substring(image.LastIndexOf('.') + 1);
-            return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
-        }
     }
 }

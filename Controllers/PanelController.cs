@@ -134,18 +134,43 @@ namespace DuzceUniTez.Controllers
         public IActionResult EditEtkinlik(int? id)
         {
             if (id == null)
-                return View(new Etkinlik());
+                return View(new EtkinlikViewModel());
             else
             {
                 var etkinlik = _repo.GetEtkinlik((int)id);
-                return View(etkinlik);
+                return View(new EtkinlikViewModel
+                {
+                    Id = etkinlik.Id,
+                    EtkinlikBaslik = etkinlik.EtkinlikBaslik,
+                    EtkinlikAciklama = etkinlik.EtkinlikAciklama,
+                    EtkinlikTarih = etkinlik.EtkinlikTarih,
+                    yukluEtkinlikResim = etkinlik.EtkinlikResim
+                });
             }
         }
 
         [HttpPost]
         //Asenkron görev olarak tanımlanıyor
-        public async Task<IActionResult> EditEtkinlik(Etkinlik etkinlik)
+        public async Task<IActionResult> EditEtkinlik(EtkinlikViewModel vm)
         {
+            Etkinlik etkinlik = new Etkinlik
+            {
+                Id = vm.Id,
+                EtkinlikBaslik = vm.EtkinlikBaslik,
+                EtkinlikAciklama = vm.EtkinlikAciklama,
+                EtkinlikTarih = vm.EtkinlikTarih,
+            };
+
+            if (vm.EtkinlikResim == null)
+                etkinlik.EtkinlikResim = vm.yukluEtkinlikResim;
+            else
+            {
+                if (!string.IsNullOrEmpty(vm.yukluEtkinlikResim))
+                    _fileManager.RemoveImage(vm.yukluEtkinlikResim);
+
+                etkinlik.EtkinlikResim = await _fileManager.SaveImage(vm.EtkinlikResim);
+            }
+
             if (etkinlik.Id == 0)
                 _repo.AddEtkinlik(etkinlik);
             else
