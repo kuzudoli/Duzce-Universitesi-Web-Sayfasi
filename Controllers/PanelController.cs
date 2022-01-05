@@ -207,7 +207,8 @@ namespace DuzceUniTez.Controllers
             else
             {
                 var fakulte = _repo.GetFakulte((int)id);
-                return View(new FakulteViewModel {
+                return View(new FakulteViewModel
+                {
                     Id = fakulte.Id,
                     FakulteAd = fakulte.FakulteAd,
                     FakulteAciklama = fakulte.FakulteAciklama,
@@ -235,9 +236,10 @@ namespace DuzceUniTez.Controllers
             };
 
 
-            if(vm.FakulteResim == null)
+            if (vm.FakulteResim == null)
                 fakulte.FakulteResim = vm.yukluFakulteResim;
-            else {
+            else
+            {
                 if (!string.IsNullOrEmpty(vm.yukluFakulteResim))
                     _fileManager.RemoveImage(vm.yukluFakulteResim);
 
@@ -335,12 +337,12 @@ namespace DuzceUniTez.Controllers
                 return View(new EnsitutuViewModel
                 {
                     Id = enstitu.Id,
-                    EnsitutuAd=enstitu.EnsitutuAd,
-                    EnsitutuAciklama=enstitu.EnsitutuAciklama,
-                    EnsitutuAdres =enstitu.EnsitutuAdres,
-                    EnsitutuTel=enstitu.EnsitutuTel,
-                    EnsitutuMail=enstitu.EnsitutuMail,
-                    yukluEnsitutuResim=enstitu.EnsitutuResim
+                    EnsitutuAd = enstitu.EnsitutuAd,
+                    EnsitutuAciklama = enstitu.EnsitutuAciklama,
+                    EnsitutuAdres = enstitu.EnsitutuAdres,
+                    EnsitutuTel = enstitu.EnsitutuTel,
+                    EnsitutuMail = enstitu.EnsitutuMail,
+                    yukluEnsitutuResim = enstitu.EnsitutuResim
                 });
             }
         }
@@ -402,18 +404,47 @@ namespace DuzceUniTez.Controllers
         {
             if (id == null)
             {
-                return View(new YuksekOkul());
+                return View(new YuksekokulDataViewModel());
             }
             else
             {
                 var yuksekOkul = _repo.GetYuksekOkul((int)id);
-                return View(yuksekOkul);
+                return View(new YuksekokulDataViewModel
+                {
+                    Id = yuksekOkul.Id,
+                    YuksekOkulAd = yuksekOkul.YuksekOkulAd,
+                    YuksekOkulAciklama=yuksekOkul.YuksekOkulAciklama,
+                    YuksekOkulAdres=yuksekOkul.YuksekOkulAdres,
+                    YuksekOkulTel=yuksekOkul.YuksekOkulTel,
+                    YuksekOkulMail=yuksekOkul.YuksekOkulMail,
+                    yukluYuksekOkulResim=yuksekOkul.YuksekOkulResim
+                });
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditYuksekOkullar(YuksekOkul yuksekOkul)
+        public async Task<IActionResult> EditYuksekOkullar(YuksekokulDataViewModel vm)
         {
+            YuksekOkul yuksekOkul = new YuksekOkul
+            {
+                Id = vm.Id,
+                YuksekOkulAd = vm.YuksekOkulAd,
+                YuksekOkulAciklama = vm.YuksekOkulAciklama,
+                YuksekOkulAdres = vm.YuksekOkulAdres,
+                YuksekOkulTel = vm.YuksekOkulTel,
+                YuksekOkulMail = vm.YuksekOkulMail,
+            };
+
+            if (vm.YuksekOkulResim == null)
+                yuksekOkul.YuksekOkulResim = vm.yukluYuksekOkulResim;
+            else
+            {
+                if (!string.IsNullOrEmpty(vm.yukluYuksekOkulResim))
+                    _fileManager.RemoveImage(vm.yukluYuksekOkulResim);
+
+                yuksekOkul.YuksekOkulResim = await _fileManager.SaveImage(vm.YuksekOkulResim);
+            }
+
             if (yuksekOkul.Id == 0)
                 _repo.AddYuksekOkul(yuksekOkul);
             else

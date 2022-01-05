@@ -1,4 +1,5 @@
-﻿using DuzceUniTez.Data.Repository;
+﻿using DuzceUniTez.Data.FileManager;
+using DuzceUniTez.Data.Repository;
 using DuzceUniTez.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,10 +12,12 @@ namespace DuzceUniTez.Controllers
     public class YuksekOkulController : Controller
     {
         private IRepository _repo;
+        private IFileManager _fileManager;
 
-        public YuksekOkulController(IRepository repo)
+        public YuksekOkulController(IRepository repo, IFileManager fileManager)
         {
             _repo = repo;
+            _fileManager = fileManager;
         }
 
         public IActionResult Index(int id)
