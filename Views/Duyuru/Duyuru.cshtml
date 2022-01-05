@@ -6,11 +6,13 @@
 <section id="first-section">
     <div class="container-fluid side-content">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <img src="@image_path" />
             </div>
-            <div class="col-md-8">
-                <h4>@Model.Duyuru.DuyuruBaslik</h4>
+            <div class="col-md-7">
+                <h4 style="margin-bottom:0px;display:inline-block;">@Model.Duyuru.DuyuruBaslik</h4>
+                <small class="text-muted" style="float:right"><b>@Model.Duyuru.DuyuruTarih</b></small>
+                <hr />
                 <p>@Model.Duyuru.DuyuruAciklama</p>
             </div>
         </div>
