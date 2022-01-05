@@ -327,18 +327,47 @@ namespace DuzceUniTez.Controllers
         {
             if (id == null)
             {
-                return View(new Enstitu());
+                return View(new EnsitutuViewModel());
             }
             else
             {
                 var enstitu = _repo.GetEnstitu((int)id);
-                return View(enstitu);
+                return View(new EnsitutuViewModel
+                {
+                    Id = enstitu.Id,
+                    EnsitutuAd=enstitu.EnsitutuAd,
+                    EnsitutuAciklama=enstitu.EnsitutuAciklama,
+                    EnsitutuAdres =enstitu.EnsitutuAdres,
+                    EnsitutuTel=enstitu.EnsitutuTel,
+                    EnsitutuMail=enstitu.EnsitutuMail,
+                    yukluEnsitutuResim=enstitu.EnsitutuResim
+                });
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditEnstituler(Enstitu enstitu)
+        public async Task<IActionResult> EditEnstituler(EnsitutuViewModel vm)
         {
+            Enstitu enstitu = new Enstitu
+            {
+                Id = vm.Id,
+                EnsitutuAd = vm.EnsitutuAd,
+                EnsitutuAciklama = vm.EnsitutuAciklama,
+                EnsitutuAdres = vm.EnsitutuAdres,
+                EnsitutuTel = vm.EnsitutuTel,
+                EnsitutuMail = vm.EnsitutuMail,
+            };
+
+            if (vm.EnsitutuResim == null)
+                enstitu.EnsitutuResim = vm.yukluEnsitutuResim;
+            else
+            {
+                if (!string.IsNullOrEmpty(vm.yukluEnsitutuResim))
+                    _fileManager.RemoveImage(vm.yukluEnsitutuResim);
+
+                enstitu.EnsitutuResim = await _fileManager.SaveImage(vm.EnsitutuResim);
+            }
+
             if (enstitu.Id == 0)
                 _repo.AddEnstitu(enstitu);
             else
