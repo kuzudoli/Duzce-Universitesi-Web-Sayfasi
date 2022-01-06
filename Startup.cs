@@ -1,6 +1,7 @@
 using DuzceUniTez.Data;
 using DuzceUniTez.Data.FileManager;
 using DuzceUniTez.Data.Repository;
+using DuzceUniTez.Seeder;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -57,6 +58,7 @@ namespace DuzceUniTez
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                DataSeed.Seed(app); //Seeding iþlemi
             }
 
             app.UseAuthentication();
