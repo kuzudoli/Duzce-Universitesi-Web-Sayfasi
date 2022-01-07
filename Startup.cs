@@ -58,7 +58,7 @@ namespace DuzceUniTez
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                DataSeed.Seed(app); //Seeding iþlemi
+                DataSeed.Seed(app); //Seeding islemi
             }
 
             app.UseAuthentication();

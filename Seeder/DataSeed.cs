@@ -18,7 +18,7 @@ namespace DuzceUniTez.Seeder
 
             var context = scope.ServiceProvider.GetService<AppDbContext>();
 
-            context.Database.Migrate();
+            //context.Database.Migrate();
 
             if (context.Fakulteler.Count() == 0)
             {
