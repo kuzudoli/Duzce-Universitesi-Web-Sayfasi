@@ -20,3 +20,16 @@ Düzce Üniversitesi Teknoloji Fakültesi öğrencileri tarafından geliştirilm
 - [Ferhat YÖNDEMLİ](https://github.com/FerhatYondemli) Panel Frontend ve Panel Backend
 - [Enes ÇAKIR](https://github.com/kuzudoli) Web Frontend ve Panel Backend
   
+## Kullanım/Örnekler
+Çalıştırma aşamasında hata alınırsa aşağıdaki yolu izleyebilirsiniz
+```
+1.Başlat
+2.Ara: SQL Server Configuration Manager
+3.SQL Server Network Configuration > Protocols for SQLEXPRESS
+4.TCP/IP > Ip Addresses > IPAll
+5.TCP Port'u "1433" olarak ayarlayınız
+
+Dipnot: TCP/IP durumunun "Enabled" olduğundan emin olunuz..
+```
+
+  
