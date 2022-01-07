@@ -15,7 +15,6 @@
                 <th scope="col">ID</th>
                 <th scope="col">Adı</th>
                 <th scope="col">Tipi</th>
-                <th scope="col">Fakülte</th>
                 <th scope="col">#</th>
                 <th scope="col">#</th>
             </tr>
@@ -27,7 +26,6 @@
                     <th scope="row">@bolum.Id</th>
                     <td>@bolum.BolumAdi</td>
                     <td>@bolum.BolumTipi</td>
-                    <td>@bolum.Fakultesi</td>
                     <td>
                         <a class="btn btn-outline-info" asp-controller="Panel" asp-action="EditBolumler" asp-route-id="@bolum.Id">Düzenle</a>
                     </td>

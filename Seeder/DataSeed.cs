@@ -30,7 +30,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.ef@duzce.edu.tr",
                              FakulteTel="0380 542 13 55" , 
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -39,7 +39,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.fe@duzce.edu.tr",
                              FakulteTel="0380 541 24 04",
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -48,7 +48,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.ilf@duzce.edu.tr",
                              FakulteTel="0380 542 11 70" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -57,7 +57,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.if@duzce.edu.tr",
                              FakulteTel="0380 542 13 70" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -66,7 +66,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.mf@duzce.edu.tr",
                              FakulteTel="0380 542 10 36" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -75,7 +75,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.of@duzce.edu.tr",
                              FakulteTel="0380 542 11 37" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { FakulteAd="Sağlık Bilimleri Fakültesi",
@@ -83,7 +83,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.sbf@duzce.edu.tr",
                              FakulteTel="0380 542 11 41" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -92,7 +92,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.spbf@duzce.edu.tr",
                              FakulteTel="0380 542 11 45" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -101,7 +101,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.tipf@duzce.edu.tr",
                              FakulteTel="0380 542 14 16" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
 
                          new Fakulte() { 
@@ -110,7 +110,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.zf@duzce.edu.tr",
                              FakulteTel="0380 541 22 94" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                             FakulteResim = "none.jpg"
+                            
                          },
                     });
 
@@ -122,7 +122,7 @@ namespace DuzceUniTez.Seeder
                             EnsitutuMail ="lisansustu@duzce.edu.tr",
                             EnsitutuTel = "0380 542 14 37",
                             EnsitutuAdres = "Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            EnsitutuResim = "none.jpg"
+                           
                          },
                     });
 
@@ -134,7 +134,7 @@ namespace DuzceUniTez.Seeder
                             YuksekOkulMail = "turizm@duzce.edu.tr",
                             YuksekOkulTel = "0380 611 29 99",
                             YuksekOkulAdres = "Akçakoca Yerleşkesi Osmaniye Mahallesi Atatürk Cad. No: 221 Akçakoca/Düzce 81650",
-                            YuksekOkulResim = "none.jpg"
+                           
                          },
                          new YuksekOkul() {
                             YuksekOkulAd = "Hakime Erciyas Yabancı Diller Y.",
@@ -142,7 +142,7 @@ namespace DuzceUniTez.Seeder
                             YuksekOkulMail = "ogrenciisleri.ydy@duzce.edu.tr",
                             YuksekOkulTel = "0380 542 11 63",
                             YuksekOkulAdres = "Konuralp Yerleşkesi Merkez/DÜZCE 81620",
-                            YuksekOkulResim = "none.jpg"
+                           
                          },
                     });
 
@@ -154,7 +154,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                            MeslekYuksekOkulResim = "none.jpg"
+                           
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Çilimli Meslek Yüksekokulu",
@@ -162,7 +162,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                            MeslekYuksekOkulResim = "none.jpg"
+                           
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Cumayeri Meslek Yüksekokulu",
@@ -170,7 +170,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                            MeslekYuksekOkulResim = "none.jpg"
+                           
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Gölyaka Meslek Yüksekokulu",
@@ -178,7 +178,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                            MeslekYuksekOkulResim = "none.jpg"
+                           
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Gümüşova Meslek Yüksekokulu",
@@ -186,7 +186,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                            MeslekYuksekOkulResim = "none.jpg"
+                           
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Kaynaşlı Meslek Yüksekokulu",
@@ -194,7 +194,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                            MeslekYuksekOkulResim = "none.jpg"
+                           
                          },
                     });
 
@@ -203,22 +203,26 @@ namespace DuzceUniTez.Seeder
                          new Duyuru() { 
                              DuyuruBaslik="Üniversitemiz Hastanesi’nde Büyük Bakım Onarım Başladı", 
                              DuyuruAciklama="Üniversitemiz Hastanesi, hasta ve hasta yakınlarına daha kaliteli, güvenli ve modern bir ortamda sağlık hizmeti sunabilmek amacıyla büyük bakım ve onarım çalışmalarına başladı.",
-                             DuyuruResim="none.jpg"},
+                             DuyuruResim = "img_07-01-2022-16-07-47.png"
+                         },
 
                          new Duyuru() { 
                              DuyuruBaslik="Öğrencilerimiz “Açık Mutfak”ta",
                              DuyuruAciklama="Her alanda olduğu gibi beslenme hizmetlerinde de şeffaflığa verdiği önemi gösteren Üniversitemiz, “Açık Mutfak: Yemeğim Nasıl Pişiyor?” etkinliği kapsamında öğrencilerini, Konuralp Yerleşkesi Karavana Mutfağı’nda konuk etti.",
-                             DuyuruResim="none.jpg"},
+                             DuyuruResim = "img_07-01-2022-16-11-26.png"
+                         },
 
                          new Duyuru() { 
                              DuyuruBaslik="Üniversitemiz Süs ve Tıbbi Bitkiler Botanik Bahçesi’nde Bitkilendirme Çalışmalarına Başlandı",
                              DuyuruAciklama="Alt yapısı Üniversitemiz Rektörlüğü tarafından tamamlanan, Orman Fakültemiz ile Süs ve Tıbbi Bitkiler Üretim Uygulama ve Araştırma Merkezimizin özverili çalışmaları ile sona gelinen “Üniversitemiz Süs ve Tıbbi Bitkiler Botanik Bahçesi” yatırımında ilk bitki dikimi, düzenlenen törenle gerçekleştirildi.",
-                             DuyuruResim="none.jpg"},
+                             DuyuruResim = "img_07-01-2022-16-11-10.png"
+                         },
 
                          new Duyuru() { 
                              DuyuruBaslik="Kariyer Yolunda Bilgi ve Deneyimlerini Paylaştı",
                              DuyuruAciklama="Üniversitemiz Kariyer Geliştirme ve Mezun İzleme Uygulama Araştırma Merkezi Müdürü Dr. Öğr. Üyesi Senem Çolak Yazıcı, Düzce Uğur Fen ve Anadolu Lisesi Okullarının Kariyer Günleri etkinliğine katıldı.",
-                             DuyuruResim="none.jpg"},
+                             DuyuruResim = "img_07-01-2022-16-11-19.png"
+                         },
                     });
 
                 context.Etkinlikler.AddRange(
@@ -226,17 +230,20 @@ namespace DuzceUniTez.Seeder
                          new Etkinlik() { 
                              EtkinlikBaslik="Yemen’de Neler Oluyor?",
                              EtkinlikAciklama="Etkinliğe Katılmak İçin adresi ziyaret ediniz-https://3b.duzce.edu.tr/b/ahm-uvv-6zc",
-                             EtkinlikResim="none.jpg"},
+                             EtkinlikResim="img_07-01-2022-16-12-45.png"
+                         },
 
                          new Etkinlik() { 
                              EtkinlikBaslik="Uçak Motorları ve Havacılık Sanayi Tedarik Zinciri",
                              EtkinlikAciklama="Uçak Motorları ve Havacılık Sanayi Tedarik Zinciri",
-                             EtkinlikResim="none.jpg"},
+                             EtkinlikResim="img_07-01-2022-16-12-52.png"
+                         },
 
                          new Etkinlik() { 
                              EtkinlikBaslik="Hayatın Renkleri",
                              EtkinlikAciklama="Hayatın Renkleri radyo programına katılmayı unutmayın!",
-                             EtkinlikResim="none.jpg"},
+                             EtkinlikResim="img_07-01-2022-16-12-58.png"
+                         },
                     });
 
                 context.Haberler.AddRange(
@@ -245,25 +252,29 @@ namespace DuzceUniTez.Seeder
                              HaberBaslik="Düzce Valisi Cevdet Atay ve Beraberindeki Heyet Rektörümüzü Ziyaret Etti",
                              HaberAciklama="Düzce Valisi Cevdet Atay, Cumhuriyet Başsavcısı Sedat Çelik, İl Jandarma Komutanı Albay Naci Akkaş, Düzce Ticaret ve Sanayi Odası Yönetim Kurulu Başkanı Tuncay Şahin Rektörümüz Prof. Dr. Nigar Demircan Çakar’ı ziyaret etti.",
                              HaberKategori="Diğer",
-                             HaberResim="none.jpg"},
+                             HaberResim="img_07-01-2022-16-15-03.png"
+                         },
 
                          new Haber() {
                              HaberBaslik="Uluslararası Sezai Karakoç Sempozyumu",
                              HaberAciklama="Dicle Üniversitesi ev sahipliğinde Diyarbakır Valiliği, Dicle Üniversitesi, Ankara Hacı Bayram Veli Üniversitesi, Cihannüma Dayanışma ve İşbirliği Derneği ve Diyarbakır Büyükşehir Belediyesi'nin iştirakiyle; yakın zamanda ebediyete uğurladığımız merhum Sezai KARAKOÇ'un fikriyatı, hatırası, eserleri, ekonomik, toplumsal ve siyasal görüşleri ve bunların günümüze yansımalarını müzakere etmek üzere 26-28 Mayıs 2022 tarihlerinde, memleketi Diyarbakır'da “Uluslararası Sezai Karakoç Sempozyumu” düzenlenecektir.",
                              HaberKategori="Akademik",
-                             HaberResim="none.jpg"},
+                             HaberResim="img_07-01-2022-16-14-56.jpg"
+                         },
 
                          new Haber() {
                              HaberBaslik="Üniversitemiz GreenMetric Endeksi’nde İlerleyişini Sürdürüyor",
                              HaberAciklama="Çevre düzenlemesi, enerji, iklim değişikliği, atık, su, ulaşım, eğitim ve karbon ayak izi ölçümleri gibi farklı alanlardaki çeşitli kriterlere göre sıralama yapan GreenMetric Endeksi’nde Üniversitemiz yine yerini aldı.",
                              HaberKategori="Diğer",
-                             HaberResim="none.jpg"},
+                             HaberResim="img_07-01-2022-16-15-14.png"
+                         },
 
                          new Haber() {
                              HaberBaslik="Öğrencilerimiz “Açık Mutfak”ta",
                              HaberAciklama="Her alanda olduğu gibi beslenme hizmetlerinde de şeffaflığa verdiği önemi gösteren Üniversitemiz, “Açık Mutfak: Yemeğim Nasıl Pişiyor?” etkinliği kapsamında öğrencilerini, Konuralp Yerleşkesi Karavana Mutfağı’nda konuk etti.",
                              HaberKategori="Sağlık",
-                             HaberResim="none.jpg"},
+                             HaberResim="img_07-01-2022-16-15-09.png"
+                         },
                     });
             }
             context.SaveChanges();
