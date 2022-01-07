@@ -21,7 +21,7 @@ Düzce Üniversitesi Teknoloji Fakültesi öğrencileri tarafından geliştirilm
 - [Enes ÇAKIR](https://github.com/kuzudoli) Web Frontend ve Panel Backend
   
 ## Kullanım/Örnekler
-Çalıştırma aşamasında hata alınırsa aşağıdaki yolu izleyebilirsiniz
+Proje Code-First yaklaşımıyla gerçekleştirildiği için çalıştırma aşamasında hata alınırsa aşağıdaki yolu izleyebilirsiniz
 ```
 1.Başlat
 2.Ara: SQL Server Configuration Manager
