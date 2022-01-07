@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace DuzceUniTez.Controllers
 {
-    public class FakulteController : Controller
+    public class FakulteController : MenuController
     {
         private IRepository _repo;
         private IFileManager _fileManager;
 
-        public FakulteController(IRepository repo, IFileManager fileManager)
+        public FakulteController(IRepository repo, IFileManager fileManager) : base(repo)
         {
             _repo = repo;
             _fileManager = fileManager;
@@ -25,10 +25,7 @@ namespace DuzceUniTez.Controllers
         {
             DataViewModel mymodel = new DataViewModel();
             //menu
-            mymodel.Fakulteler = _repo.GetAllFakulteler();
-            mymodel.Enstituler = _repo.GetAllEnstituler();
-            mymodel.YuksekOkullar = _repo.GetAllYuksekOkullar();
-            mymodel.MeslekYuksekOkullar = _repo.GetAllMeslekYuksekOkullar();
+            mymodel = GetMenu(mymodel);
 
             //Fakulte fakulte = _repo.GetFakulte(id);
             mymodel.Bolumler = _repo.GetAllBolumler().Where(b => b.FakulteId == id);
