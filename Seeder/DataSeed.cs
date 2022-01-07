@@ -30,7 +30,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.ef@duzce.edu.tr",
                              FakulteTel="0380 542 13 55" , 
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-18-54.jpg"
                          },
 
                          new Fakulte() { 
@@ -39,7 +39,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.fe@duzce.edu.tr",
                              FakulteTel="0380 541 24 04",
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-18-38.jpg"
                          },
 
                          new Fakulte() { 
@@ -48,7 +48,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.ilf@duzce.edu.tr",
                              FakulteTel="0380 542 11 70" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-18-27.jpg"
                          },
 
                          new Fakulte() { 
@@ -57,7 +57,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.if@duzce.edu.tr",
                              FakulteTel="0380 542 13 70" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim=""
                          },
 
                          new Fakulte() { 
@@ -66,7 +66,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.mf@duzce.edu.tr",
                              FakulteTel="0380 542 10 36" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-18-11.jpg"
                          },
 
                          new Fakulte() { 
@@ -75,7 +75,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.of@duzce.edu.tr",
                              FakulteTel="0380 542 11 37" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-18-02.jpg"
                          },
 
                          new Fakulte() { FakulteAd="Sağlık Bilimleri Fakültesi",
@@ -83,7 +83,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.sbf@duzce.edu.tr",
                              FakulteTel="0380 542 11 41" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-17-52.jpg"
                          },
 
                          new Fakulte() { 
@@ -92,7 +92,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.spbf@duzce.edu.tr",
                              FakulteTel="0380 542 11 45" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-17-46.jpg"
                          },
 
                          new Fakulte() { 
@@ -101,7 +101,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.tipf@duzce.edu.tr",
                              FakulteTel="0380 542 14 16" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-18-46.jpg"
                          },
 
                          new Fakulte() { 
@@ -110,7 +110,7 @@ namespace DuzceUniTez.Seeder
                              FakulteMail="ogrenciisleri.zf@duzce.edu.tr",
                              FakulteTel="0380 541 22 94" ,
                              FakulteAdres="Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                            
+                             FakulteResim="img_07-01-2022-16-17-38.jpg"
                          },
                     });
 
