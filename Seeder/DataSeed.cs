@@ -122,7 +122,7 @@ namespace DuzceUniTez.Seeder
                             EnsitutuMail ="lisansustu@duzce.edu.tr",
                             EnsitutuTel = "0380 542 14 37",
                             EnsitutuAdres = "Düzce Üniversitesi Konuralp Yerleşkesi Konuralp Merkez/Düzce 81620",
-                           
+                            EnsitutuResim="img_07-01-2022-16-25-42.jpg"
                          },
                     });
 
@@ -134,7 +134,7 @@ namespace DuzceUniTez.Seeder
                             YuksekOkulMail = "turizm@duzce.edu.tr",
                             YuksekOkulTel = "0380 611 29 99",
                             YuksekOkulAdres = "Akçakoca Yerleşkesi Osmaniye Mahallesi Atatürk Cad. No: 221 Akçakoca/Düzce 81650",
-                           
+                            YuksekOkulResim="img_07-01-2022-16-27-12.jpg"
                          },
                          new YuksekOkul() {
                             YuksekOkulAd = "Hakime Erciyas Yabancı Diller Y.",
@@ -142,7 +142,7 @@ namespace DuzceUniTez.Seeder
                             YuksekOkulMail = "ogrenciisleri.ydy@duzce.edu.tr",
                             YuksekOkulTel = "0380 542 11 63",
                             YuksekOkulAdres = "Konuralp Yerleşkesi Merkez/DÜZCE 81620",
-                           
+                            YuksekOkulResim="img_07-01-2022-16-27-05.jpg"
                          },
                     });
 
@@ -154,7 +154,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                           
+                            MeslekYuksekOkulResim="img_07-01-2022-16-31-21.jpg"
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Çilimli Meslek Yüksekokulu",
@@ -162,7 +162,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                           
+                            MeslekYuksekOkulResim="img_07-01-2022-16-31-36.jpg"
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Cumayeri Meslek Yüksekokulu",
@@ -170,7 +170,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                           
+                            MeslekYuksekOkulResim="img_07-01-2022-16-31-14.jpg"
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Gölyaka Meslek Yüksekokulu",
@@ -178,7 +178,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                           
+                            MeslekYuksekOkulResim="img_07-01-2022-16-31-08.jpg"
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Gümüşova Meslek Yüksekokulu",
@@ -186,7 +186,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                           
+                            MeslekYuksekOkulResim="img_07-01-2022-16-31-00.jpg"
                          },
                          new MeslekYuksekOkul() {
                             MeslekYuksekOkulAd = "Kaynaşlı Meslek Yüksekokulu",
@@ -194,7 +194,7 @@ namespace DuzceUniTez.Seeder
                             MeslekYuksekOkulMail = "akmyo@duzce.edu.tr",
                             MeslekYuksekOkulTel = "0380 611 84 19",
                             MeslekYuksekOkulAdres = "DÜZCE ÜNİVERSİTESİ AKÇAKOCA YERLEŞKESİ, Osmaniye Mah. Atatürk Cad. No 221",
-                           
+                            MeslekYuksekOkulResim="img_07-01-2022-16-31-30.jpg"
                          },
                     });
 
