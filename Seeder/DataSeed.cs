@@ -42,7 +42,8 @@ namespace DuzceUniTez.Seeder
                              FakulteResim = "none.jpg"
                          },
 
-                         new Fakulte() { FakulteAd="İlahiyat Fakültesi",
+                         new Fakulte() { 
+                             FakulteAd="İlahiyat Fakültesi",
                              FakulteAciklama="Düzce Üniversitesi bünyesinde “İlahiyat Fakültesi” açılması Üniversitemiz Senatosunun 12.12.2012 tarih ve 17 nolu toplantısında 2012/148 sayılı Kararı ile uygun görülmüş olup, söz konusu karar Üniversitemiz tarafından 17.12.2012 tarih ve 00.00/101.102-4041-9984 sayılı yazı ile  Yükseköğretim Kurulu Başkanlığına gönderilmiştir. Fakültemizin açılması ile ilgili dosya Yükseköğretim Kurulu Başkanlığı tarafından kabul edilmiş ve Yükseköğretim Kurumlarına bağlı olarak kurulması; Milli Eğitim Bakanlığı’na sunulmuş ve Yükseköğretim Kurumlarına bağlı olarak kurulması; Milli Eğitim Bakanlığı’nın teklif yazıları üzerine, 28.03.1983 tarih ve 2809 sayılı Kanunun ek 30.uncu maddesine göre, Bakanlar Kurulu’nca 29.04.2013 tarih ve 2013/4716 Karar Sayılı Kararıyla  Düzce Üniversitesi İlahiyat Fakültesi’nin açılması kararlaştırılmış, bu Karar 31 Mayıs 2013 Cuma günü 28663 saylı Resmi Gazetede yayımlanarak yürürlüğe girmiştir.",
                              FakulteMail="ogrenciisleri.ilf@duzce.edu.tr",
                              FakulteTel="0380 542 11 70" ,
@@ -50,7 +51,8 @@ namespace DuzceUniTez.Seeder
                              FakulteResim = "none.jpg"
                          },
 
-                         new Fakulte() { FakulteAd="İşletme Fakültesi",
+                         new Fakulte() { 
+                             FakulteAd="İşletme Fakültesi",
                              FakulteAciklama="Düzce Üniversitesi İşletme Fakültesi, 26 Şubat 2010 tarih ve 27505 sayılı Resmi Gazetede yayımlanan 2010/103 sayılı Bakanlar Kurulu kararı ile kurulmuş ve 2010-2011 Akademik Yılı'nda İşletme Bölümü ile lisans öğretimine başlamıştır. Fakültemiz; İşletme, Sağlık Yönetimi, Sigortacılık ve Sosyal Güvenlik, Uluslararası Ticaret ve Yönetim Bilişim Sistemleri olmak üzere beş bölümden oluşmaktadır.",
                              FakulteMail="ogrenciisleri.if@duzce.edu.tr",
                              FakulteTel="0380 542 13 70" ,
@@ -58,7 +60,8 @@ namespace DuzceUniTez.Seeder
                              FakulteResim = "none.jpg"
                          },
 
-                         new Fakulte() { FakulteAd="Mühendislik Fakültesi",
+                         new Fakulte() { 
+                             FakulteAd="Mühendislik Fakültesi",
                              FakulteAciklama="Düzce Üniversitesi Mühendislik Fakültesi 9 Mayıs 2008 tarihinde kurulmuş, 2009-2010 eğitim-öğretim yılından itibaren öğrenci almaya, 2013 yılından itibaren ilk mezunlarını vermeye başlamıştır.",
                              FakulteMail="ogrenciisleri.mf@duzce.edu.tr",
                              FakulteTel="0380 542 10 36" ,
@@ -66,7 +69,8 @@ namespace DuzceUniTez.Seeder
                              FakulteResim = "none.jpg"
                          },
 
-                         new Fakulte() { FakulteAd="Orman Fakültesi",
+                         new Fakulte() { 
+                             FakulteAd="Orman Fakültesi",
                              FakulteAciklama="1992 yılında Abant İzzet Baysal Üniversitesi’ne bağlı olarak Düzce’de kurulan, daha sonra 2006 yılında kurulan Düzce Üniversitesi bünyesine dahil olan fakültemizde; Ağaç İşleri Endüstri Mühendisliği Bölümü, Peyzaj Mimarlığı Bölümü, Orman Endüstri Mühendisliği Bölümü, Orman Mühendisliği Bölümü; lisans ve lisansüstü düzeyde öğretim faaliyeti vermektedir.",
                              FakulteMail="ogrenciisleri.of@duzce.edu.tr",
                              FakulteTel="0380 542 11 37" ,
@@ -82,7 +86,8 @@ namespace DuzceUniTez.Seeder
                              FakulteResim = "none.jpg"
                          },
 
-                         new Fakulte() { FakulteAd="Spor Bilimleri Fakültesi",
+                         new Fakulte() { 
+                             FakulteAd="Spor Bilimleri Fakültesi",
                              FakulteAciklama="Fakültemiz, 03.07.2011 tarih ve 27983 sayılı Resmi Gazetede yayınlanan Bakanlar Kurulu Kararı ile Beden Eğitimi ve Spor Yüksekokulu olarak kurulmuştur. 25.01.2016 tarihli ve 2016/8562 sayılı kararname ile akademik faaliyetlerini Spor Bilimleri Fakültesi adıyla sürdürmektedir. ",
                              FakulteMail="ogrenciisleri.spbf@duzce.edu.tr",
                              FakulteTel="0380 542 11 45" ,
@@ -90,7 +95,8 @@ namespace DuzceUniTez.Seeder
                              FakulteResim = "none.jpg"
                          },
 
-                         new Fakulte() { FakulteAd="Tıp Fakültesi",
+                         new Fakulte() { 
+                             FakulteAd="Tıp Fakültesi",
                              FakulteAciklama="Tıp Fakültesi  1992 yılında Abant İzzet Baysal Üniversitesi’ne bağlı olarak kurulmuş  ve 1996 yılında Eğitim-Öğretim faaliyetlerine başlamıştır. Tıp Fakültemiz 2006 yılında çıkan 5467 sayılı kanunla yeni kurulan Düzce Üniversitesi’ne bağlanmıştır.",
                              FakulteMail="ogrenciisleri.tipf@duzce.edu.tr",
                              FakulteTel="0380 542 14 16" ,
@@ -98,7 +104,8 @@ namespace DuzceUniTez.Seeder
                              FakulteResim = "none.jpg"
                          },
 
-                         new Fakulte() { FakulteAd="Ziraat Fakültesi",
+                         new Fakulte() { 
+                             FakulteAd="Ziraat Fakültesi",
                              FakulteAciklama="Ziraat Fakültesi; 23 Mart 2012 tarih ve 28242 sayılı Resmi Gazetede yayımlanan 2012/2883 sayılı Bakanlar Kurulu Kararı ile ¨Ziraat ve Doğa Bilimleri Fakültesi¨ adı ile kurulmuştur. 2809 sayılı Yükseköğretim Kurumları Teşkilatı Kanunu’nun ek 30. maddesi gereğince 27 Mart 2020 tarih ve 2319 sayılı Cumhurbaşkanı Kararı ile adı 'Ziraat Fakültesi' olarak değiştirilmiştir.",
                              FakulteMail="ogrenciisleri.zf@duzce.edu.tr",
                              FakulteTel="0380 541 22 94" ,
@@ -191,13 +198,72 @@ namespace DuzceUniTez.Seeder
                          },
                     });
 
-
                 context.Duyurular.AddRange(
                     new List<Duyuru>() {
-                         new Duyuru() { DuyuruBaslik="Güz Dönemi Sınav Programı", 
-                             DuyuruAciklama="Sınav programı açıklandı.", 
-                             DuyuruTarih=Convert.ToDateTime("07-01-2022"),
+                         new Duyuru() { 
+                             DuyuruBaslik="Üniversitemiz Hastanesi’nde Büyük Bakım Onarım Başladı", 
+                             DuyuruAciklama="Üniversitemiz Hastanesi, hasta ve hasta yakınlarına daha kaliteli, güvenli ve modern bir ortamda sağlık hizmeti sunabilmek amacıyla büyük bakım ve onarım çalışmalarına başladı.",
                              DuyuruResim="none.jpg"},
+
+                         new Duyuru() { 
+                             DuyuruBaslik="Öğrencilerimiz “Açık Mutfak”ta",
+                             DuyuruAciklama="Her alanda olduğu gibi beslenme hizmetlerinde de şeffaflığa verdiği önemi gösteren Üniversitemiz, “Açık Mutfak: Yemeğim Nasıl Pişiyor?” etkinliği kapsamında öğrencilerini, Konuralp Yerleşkesi Karavana Mutfağı’nda konuk etti.",
+                             DuyuruResim="none.jpg"},
+
+                         new Duyuru() { 
+                             DuyuruBaslik="Üniversitemiz Süs ve Tıbbi Bitkiler Botanik Bahçesi’nde Bitkilendirme Çalışmalarına Başlandı",
+                             DuyuruAciklama="Alt yapısı Üniversitemiz Rektörlüğü tarafından tamamlanan, Orman Fakültemiz ile Süs ve Tıbbi Bitkiler Üretim Uygulama ve Araştırma Merkezimizin özverili çalışmaları ile sona gelinen “Üniversitemiz Süs ve Tıbbi Bitkiler Botanik Bahçesi” yatırımında ilk bitki dikimi, düzenlenen törenle gerçekleştirildi.",
+                             DuyuruResim="none.jpg"},
+
+                         new Duyuru() { 
+                             DuyuruBaslik="Kariyer Yolunda Bilgi ve Deneyimlerini Paylaştı",
+                             DuyuruAciklama="Üniversitemiz Kariyer Geliştirme ve Mezun İzleme Uygulama Araştırma Merkezi Müdürü Dr. Öğr. Üyesi Senem Çolak Yazıcı, Düzce Uğur Fen ve Anadolu Lisesi Okullarının Kariyer Günleri etkinliğine katıldı.",
+                             DuyuruResim="none.jpg"},
+                    });
+
+                context.Etkinlikler.AddRange(
+                    new List<Etkinlik>() {
+                         new Etkinlik() { 
+                             EtkinlikBaslik="Yemen’de Neler Oluyor?",
+                             EtkinlikAciklama="Etkinliğe Katılmak İçin adresi ziyaret ediniz-https://3b.duzce.edu.tr/b/ahm-uvv-6zc",
+                             EtkinlikResim="none.jpg"},
+
+                         new Etkinlik() { 
+                             EtkinlikBaslik="Uçak Motorları ve Havacılık Sanayi Tedarik Zinciri",
+                             EtkinlikAciklama="Uçak Motorları ve Havacılık Sanayi Tedarik Zinciri",
+                             EtkinlikResim="none.jpg"},
+
+                         new Etkinlik() { 
+                             EtkinlikBaslik="Hayatın Renkleri",
+                             EtkinlikAciklama="Hayatın Renkleri radyo programına katılmayı unutmayın!",
+                             EtkinlikResim="none.jpg"},
+                    });
+
+                context.Haberler.AddRange(
+                    new List<Haber>() {
+                         new Haber() {
+                             HaberBaslik="Düzce Valisi Cevdet Atay ve Beraberindeki Heyet Rektörümüzü Ziyaret Etti",
+                             HaberAciklama="Düzce Valisi Cevdet Atay, Cumhuriyet Başsavcısı Sedat Çelik, İl Jandarma Komutanı Albay Naci Akkaş, Düzce Ticaret ve Sanayi Odası Yönetim Kurulu Başkanı Tuncay Şahin Rektörümüz Prof. Dr. Nigar Demircan Çakar’ı ziyaret etti.",
+                             HaberKategori="Diğer",
+                             HaberResim="none.jpg"},
+
+                         new Haber() {
+                             HaberBaslik="Uluslararası Sezai Karakoç Sempozyumu",
+                             HaberAciklama="Dicle Üniversitesi ev sahipliğinde Diyarbakır Valiliği, Dicle Üniversitesi, Ankara Hacı Bayram Veli Üniversitesi, Cihannüma Dayanışma ve İşbirliği Derneği ve Diyarbakır Büyükşehir Belediyesi'nin iştirakiyle; yakın zamanda ebediyete uğurladığımız merhum Sezai KARAKOÇ'un fikriyatı, hatırası, eserleri, ekonomik, toplumsal ve siyasal görüşleri ve bunların günümüze yansımalarını müzakere etmek üzere 26-28 Mayıs 2022 tarihlerinde, memleketi Diyarbakır'da “Uluslararası Sezai Karakoç Sempozyumu” düzenlenecektir.",
+                             HaberKategori="Akademik",
+                             HaberResim="none.jpg"},
+
+                         new Haber() {
+                             HaberBaslik="Üniversitemiz GreenMetric Endeksi’nde İlerleyişini Sürdürüyor",
+                             HaberAciklama="Çevre düzenlemesi, enerji, iklim değişikliği, atık, su, ulaşım, eğitim ve karbon ayak izi ölçümleri gibi farklı alanlardaki çeşitli kriterlere göre sıralama yapan GreenMetric Endeksi’nde Üniversitemiz yine yerini aldı.",
+                             HaberKategori="Diğer",
+                             HaberResim="none.jpg"},
+
+                         new Haber() {
+                             HaberBaslik="Öğrencilerimiz “Açık Mutfak”ta",
+                             HaberAciklama="Her alanda olduğu gibi beslenme hizmetlerinde de şeffaflığa verdiği önemi gösteren Üniversitemiz, “Açık Mutfak: Yemeğim Nasıl Pişiyor?” etkinliği kapsamında öğrencilerini, Konuralp Yerleşkesi Karavana Mutfağı’nda konuk etti.",
+                             HaberKategori="Sağlık",
+                             HaberResim="none.jpg"},
                     });
             }
             context.SaveChanges();
