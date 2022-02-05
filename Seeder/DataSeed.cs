@@ -20,7 +20,7 @@ namespace DuzceUniTez.Seeder
 
             context.Database.Migrate();
 
-            if (context.Fakulteler.Count() == 0)
+            if (context.Fakulteler.Count() == 0)//Her tablo için kontrol edilmeli yada genel tek bir kontrol eklenmeli
             {
                 context.Fakulteler.AddRange(
                     new List<Fakulte>() {
