@@ -42,29 +42,5 @@ namespace DuzceUniTez.Controllers
             return View(mymodel);
         }
 
-        public IActionResult Duyuru(int id)
-        {
-            var duyuru = _repo.GetDuyuru(id);
-            return View(duyuru);
-        }
-
-        public IActionResult Duyurular()
-        {
-            var duyurular = _repo.GetAllDuyurular();
-            return View(duyurular);
-        }
-
-        public IActionResult Etkinlik(int id)
-        {
-            var etkinlik = _repo.GetEtkinlik(id);
-            return View(etkinlik);
-        }
-
-        public IActionResult Etkinlikler()
-        {
-            var etkinlikler = _repo.GetAllEtkinlikler();
-            return View(etkinlikler);
-        }
-
     }
 }
