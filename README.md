@@ -14,6 +14,7 @@ Düzce Üniversitesi Teknoloji Fakültesi öğrencileri tarafından geliştirilm
 
 **ORTAM:** ASP.NET CORE MVC
 
+**VERİTABANI:** MSSQL
   
 ## Geliştiriciler
 
